@@ -1,6 +1,5 @@
 const main = () => {
     // Smooth scroll - modified from https://codepen.io/StephenScaff/pen/yyQxbq
-    // Also from https://gist.github.com/andjosh/6764939
     const links = document.querySelectorAll('[data-scroll]');
     links.forEach(l => {
         l.addEventListener('click', e => {
@@ -12,7 +11,6 @@ const main = () => {
             if (!section) {
                 console.error("No graceful failure here");
             }
-            console.log(section.offsetTop - offset);
             window.scrollTo({
                 top: section.offsetTop - offset,
                 behavior: "smooth"
@@ -20,7 +18,20 @@ const main = () => {
         });
     });
 
-    // TODO: hiding navbar
+    // TODO: blend navbar on inactivity (depends on hero - blend modes?)
+    // Hide on scroll - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+    let cachedScroll = window.pageYOffset;
+    // TODO enable only if nav is even visible
+    window.onscroll = () => {
+        if (cachedScroll > window.pageYOffset) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            console.log('hide')
+            document.getElementById("navbar").style.top = "-75px";
+        }
+        cachedScroll = window.pageYOffset;
+    }
+
 }
 
 window.addEventListener('load', main);
