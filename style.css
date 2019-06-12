@@ -1,5 +1,4 @@
-/* TODO: proper fonts for headers, across the board */
-/* TODO: Fix HR color */
+/* TODO: mobile style check */
 body {
 	margin: 0;
 	--primary-color: #205181;
@@ -27,23 +26,25 @@ h2{
 
 h3 {
 	font-family: 'Milonga', serif;
-	font-size: 1.4vw;
-	font-weight: 700;
+	font-size: 64px;
+	line-height: 80px;
+	font-weight: normal;
 	font-style: normal;
 	margin: 0;
 }
 
 h4 {
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 32px;
+	line-height: 40px;
 	font-weight: 700;
 	font-style: normal;
 	margin: 0;
 }
 
-h5 {
-	font-size: 1.4vw;
-	font-weight: 500;
+h5 { /* Basically just bold */
+	font-size: 26px;
+	line-height: 36px;
+	font-weight: 700;
 	font-style: normal;
 	margin: 0;
 }
@@ -69,13 +70,19 @@ section {
 
 hr {
   display: block;
-  border-style: inset;
-  border-width: 1px;
+  border: none;
+  margin: 7px 0 15px;
+  height: 1px;
+  background-color: var(--primary-color);
 }
 
 /* UTILITY */
 .inverted-text {
 	color: var(--inverted-color);
+}
+
+.inverted-text hr {
+	background-color: var(--inverted-color);
 }
 
 .section-title {
@@ -117,10 +124,12 @@ hr {
 	flex-direction: row;
 	justify-content: space-around;
 	flex: 1 1 auto;
+	max-width: 75vw; /* TODO: Adjust this per final layout */
 }
 
 .nav-link {
 	color: var(--primary-color);
+	font-family: 'Roboto Mono', monospace;
 	font-size: 24px;
 	line-height: 28px;
 	cursor: pointer;
@@ -128,8 +137,8 @@ hr {
 
 #navbar a {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
 	text-decoration: none;
 	margin-right: 50px;
 }
@@ -195,7 +204,7 @@ hr {
 	background-color: #ffffff;
 }
 
-.hero-text {
+#hero-text {
 	margin-top: -2.5vw;
 	margin-bottom: -2.5vw;
 }
@@ -266,12 +275,6 @@ hr {
 	margin-bottom: 5vw;
 }
 
-.schedule-block > h3 {
-	/* Inefficient? Should I just do ID? */
-	font-size: 32px;
-	line-height: 40px;
-}
-
 .schedule-item {
 	height: 33px;
 	font-size: 24px;
@@ -325,7 +328,6 @@ hr {
 	max-width: 75vw;
 	align-self: center;
 	font-weight: 600;
-	font-size: 32px;
 	line-height: 44px;
 }
 
@@ -452,7 +454,7 @@ footer {
 		margin-top: 6.25vh;
 	}
 
-	.hero-text {
+	#hero-text {
 		margin-top: -2.5vw;
 		margin-bottom: -2.5vw;
 	}
@@ -584,7 +586,7 @@ footer {
 	}
 
 	/* HERO SECTION */
-	.hero-text {
+	#hero-text {
 		margin-top: -2.5vw;
 		margin-bottom: -8vw;
 	}
