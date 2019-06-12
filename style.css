@@ -142,7 +142,11 @@ hr {
 
 /* HERO SECTION */
 #hero {
+	background-image: url(../assets/Splash\ BG.svg);
 	background-color: #f5f5f5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
 	height: 100vh;
 }
 

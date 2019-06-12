@@ -22,11 +22,12 @@ const main = () => {
     // Hide on scroll - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
     let cachedScroll = window.pageYOffset;
     // TODO enable only if nav is even visible
+    // if (getComputedStyle(document.getElementById("navbar")).display === 'none')
+    // TODO set nav background to section color
     window.onscroll = () => {
         if (cachedScroll > window.pageYOffset) {
             document.getElementById("navbar").style.top = "0";
         } else {
-            console.log('hide')
             document.getElementById("navbar").style.top = "-75px";
         }
         cachedScroll = window.pageYOffset;
