@@ -6,6 +6,8 @@ body {
 	--inverted-color: #FF00FF;
 	color: var(--primary-color);
 	font-family: 'Source Serif Pro', serif;
+	font-size: 24px;
+	line-height: 33px;
 }
 
 h1 {
@@ -52,8 +54,8 @@ h5 { /* Basically just bold */
 p {
 	margin: 0;
 	padding: 0;
-	font-size: 24px;
-	line-height: 33px;
+	font-size: 1em;
+	line-height: 1.375em;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -349,7 +351,7 @@ hr {
 #faqs-content {
 	width: 37.5vw;
 	margin-left: 12.5vw;
-	font-size: 33px;
+	font-size: 26px;
 	line-height: 36px;
 }
 
@@ -371,17 +373,20 @@ footer {
 	background-color: #f5f5f5;
 	padding-top: 75px;
 	color: var(--primary-dark);
+	width: 75%;
+	margin: auto;
 }
 
 #footer-content {
-	width: 75vw;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-self: center;
-	margin-bottom: 300px;
+	margin-bottom: 60px;
 }
 
-.content-left {
+#footer-questions-section {
 	width: 37.5vw;
 }
 
@@ -393,11 +398,13 @@ footer {
 
 #footer-reach-out {
 	font-weight: 600;
+	margin-bottom: 15px;
 }
 
-.content-right {
+#footer-gt-student {
 	margin-top: 1vw;
 	width: 37.5vw;
+	margin-bottom: 20px;
 }
 
 .footer-end {
@@ -408,25 +415,23 @@ footer {
 	justify-content: space-between;
 }
 
-.footer-hr {
-	display: block;
-  	border-style: inset;
-  	border-width: 1px;
-  	width: 75vw;
-}
-
-.footer-note {
-	margin-left: 12.5vw;
-	font-size: 2vw;
+#footer-note {
+	line-height: 44px;
 	margin-bottom: 30px;
-}
-
-.footer-logo-container {
-	margin-right: 12.5vw;
 }
 
 .footer-logo {
 	height: 3.5vw;
+}
+
+.social-row > a > img {
+	width: 48px;
+	height: 48px;
+	margin-right: 27px;
+	transition: transform 0.5s;
+}
+.social-row > a > img:hover {
+	transform: scale(1.2);
 }
 
 
@@ -515,6 +520,7 @@ footer {
 	/* FOOTER */
 	footer {
 		padding-top: 15vw;
+		width: 100%;
 		flex-direction: column-reverse;
 	}
 
@@ -524,13 +530,14 @@ footer {
 		margin-bottom: 5vw;
 	}
 
-	.content-left {
-		width: 80vw;
+	#footer-questions-section {
+		width: 423px;
+		flex: 1 1 auto;
 	}
 
-	.content-right {
+	#footer-gt-student {
 		margin-top: -2.5vw;
-		width: 80vw;
+		width: 540px;
 	}
 
 	.footer-question {
@@ -548,7 +555,7 @@ footer {
 		display: none;
 	}
 
-	.footer-note {
+	#footer-note {
 		margin-left: 1.5vw;
 		font-size: 2.25vw;
 		margin-top: 1.5vw;
