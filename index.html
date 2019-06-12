@@ -2,11 +2,14 @@
 <html>
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 <!-- TODO replace MLH badge with 2020 asset -->
+<!-- TODO fixup footer (flex) -->
 <head>
 	<title>HackGT 2019: Into the Rabbit Hole</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/png" href="assets/hackgt_logos/hackgt_favicon.png">
 	<link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Milonga" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kurale|Roboto+Mono:400,500,700|Spirax" rel="stylesheet">
 	<meta property="og:title" content="HackGT6 2019">
 	<meta property="og:description" content="Date of Event">
@@ -40,93 +43,93 @@
 	<section id="hero">
 		<div class="hero-illo">
 			<h1 class="hero-text">HackGT6</h1>
-			<h2 class="hero-subtext">Down the Rabbit Hole</h2>
+			<h2 class="hero-subtext">Into the Rabbit Hole</h2>
 		</div>
 	</section>
 
 	<section id="about">
-		<div class="about-content">
-			<h2>Welcome to Wonderland</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada libero, sed blandit ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+		<div id="about-content" class="section-content">
+			<h2 class="section-title inverted-text">Welcome to Wonderland</h2>
+			<p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada libero, sed blandit ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 			<a href="#about"><button class="button">Register</button></a>
 		</div>
 	</section>
 
 	<section id="schedule">
 		<div class="schedule-illo"></div>
-		<div class="schedule-content">
-			<h2 class="schedule-title">Schedule</h2>
+		<div id="schedule-content" class="section-content">
+			<h2 id="schedule-title" class="section-title inverted-text">Schedule</h2>
 			<div class="schedule-block">
 				<h3>Friday</h3>
 				<hr class="schedule-hr">
 				<div class="schedule-item">
-					<h4 class="schedule-times">05:30 PM</h4><p class="schedule-event">Check-in Begins</p>
+					<span class="schedule-times">05:30 PM</span><p class="schedule-event">Check-in Begins</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">06:30 PM</h4><p class="schedule-event">Opening Ceremonies</p>
+					<span class="schedule-times">06:30 PM</span><p class="schedule-event">Opening Ceremonies</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">07:30 PM</h4><p class="schedule-event">Sponsor Expo</p>
+					<span class="schedule-times">07:30 PM</span><p class="schedule-event">Sponsor Expo</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">08:30 PM</h4><p class="schedule-event">Dinner</p>
+					<span class="schedule-times">08:30 PM</span><p class="schedule-event">Dinner</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">09:00 PM</h4><p class="schedule-event">Hacking Begins</p>
+					<span class="schedule-times">09:00 PM</span><p class="schedule-event">Hacking Begins</p>
 				</div>
 			</div>
 			<div class="schedule-block">
 				<h3>Saturday</h3>
 				<hr class="schedule-hr">
 				<div class="schedule-item">
-					<h4 class="schedule-times">12:00 AM</h4><p class="schedule-event">Midnight Snack</p>
+					<span class="schedule-times">12:00 AM</span><p class="schedule-event">Midnight Snack</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">07:00 AM</h4><p class="schedule-event">Breakfast</p>
+					<span class="schedule-times">07:00 AM</span><p class="schedule-event">Breakfast</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">12:00 PM</h4><p class="schedule-event">Lunch</p>
+					<span class="schedule-times">12:00 PM</span><p class="schedule-event">Lunch</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">03:00 PM</h4><p class="schedule-event">Lunch(again!)</p>
+					<span class="schedule-times">03:00 PM</span><p class="schedule-event">Lunch(again!)</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">06:00 PM</h4><p class="schedule-event">Dinner</p>
+					<span class="schedule-times">06:00 PM</span><p class="schedule-event">Dinner</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">09:00 PM</h4><p class="schedule-event">Dinner(again!)</p>
+					<span class="schedule-times">09:00 PM</span><p class="schedule-event">Dinner(again!)</p>
 				</div>
 			</div>
 			<div class="schedule-block">
 				<h3>Sunday</h3>
 				<hr class="schedule-hr">
 				<div class="schedule-item">
-					<h4 class="schedule-times">12:00 AM</h4><p class="schedule-event">Midnight Snack</p>
+					<span class="schedule-times">12:00 AM</span><p class="schedule-event">Midnight Snack</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">07:00 AM</h4><p class="schedule-event">Breakfast</p>
+					<span class="schedule-times">07:00 AM</span><p class="schedule-event">Breakfast</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">09:00 AM</h4><p class="schedule-event">Hacking Ends</p>
+					<span class="schedule-times">09:00 AM</span><p class="schedule-event">Hacking Ends</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">10:00 AM</h4><p class="schedule-event">Project Expo/Judging</p>
+					<span class="schedule-times">10:00 AM</span><p class="schedule-event">Project Expo/Judging</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">12:00 PM</h4><p class="schedule-event">Lunch</p>
+					<span class="schedule-times">12:00 PM</span><p class="schedule-event">Lunch</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">01:00 PM</h4><p class="schedule-event">Closing Ceremonies</p>
+					<span class="schedule-times">01:00 PM</span><p class="schedule-event">Closing Ceremonies</p>
 				</div>
 				<div class="schedule-item">
-					<h4 class="schedule-times">02:00 PM</h4><p class="schedule-event">Buses Leave</p>
+					<span class="schedule-times">02:00 PM</span><p class="schedule-event">Buses Leave</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="sponsors">
-		<h2>Our Sponsors</h2>
+		<h2 id="sponsors-title" class="section-title inverted-text">Thanks to our sponsors</h2>
 		<div class="sponsors-container">
 			<div class="sponsor-icon"></div>
 			<div class="sponsor-icon"></div>
@@ -141,14 +144,14 @@
 			<div class="sponsor-icon"></div>
 			<div class="sponsor-icon"></div>
 		</div>
-		<h5 class="sponsor-note">Interested in sponsoring? Email us at sponsorship@hack.gt</h5>
+		<h4 id="sponsor-note">Interested in sponsoring? Email us at sponsorship@hack.gt</h4>
 	</section>
 
 	<section id="faqs">
-		<div class="faqs-content">
-			<h2 class="faqs-title">Frequently Asked Questions</h2>
+		<div id="faqs-content" class="section-content">
+			<h2 class="section-title">FAQs</h2>
 			<div class="faqs-item">
-				<h4 class="faqs-question">Where is HackGT6?</h4>
+				<p class="faqs-question">Where is HackGT6?</h4>
 				<p class="faqs-answer">The event will take place on Georgia Tech’s campus in the Klaus Advanced Computing Building.</p>
 			</div>
 			<div class="faqs-item">
@@ -180,13 +183,17 @@
 	</section>
 
 	<footer>
-		<div class="footer-content">
+		<div id="footer-content" class="section-content">
 			<div class="content-left">
-				<h2 class="footer-question">More questions?</h2>
-				<h5>Reach out at hello@hack.gt!</h5>
+				<div id="footer-question">
+					More questions?
+				</div>
+				<div id="footer-reach-out">
+					Reach out at hello@hack.gt!
+				</div>
 			</div>
 			<div class="content-right">
-				<h4>If you’re a GT student, make sure to like our Facebook page for updates on HackGTeeny, our workshop-filled beginner's hackathon exclusive for Georgia Tech students.</h4>
+				<p>If you’re a GT student, make sure to like our Facebook page for updates on HackGTeeny, our workshop-filled beginner's hackathon exclusive for Georgia Tech students.</p>
 			</div>
 		</div>
 		<div><hr class="footer-hr"></div>

@@ -1,48 +1,58 @@
+/* TODO: proper fonts for headers, across the board */
+/* TODO: Fix HR color */
 body {
 	margin: 0;
 	--primary-color: #205181;
-	--inverted-color: #FFFFFF;
+	--primary-dark: #0F2942;
+	--inverted-color: #FF00FF;
 	color: var(--primary-color);
+	font-family: 'Source Serif Pro', serif;
 }
 
 h1 {
-	font-family: 'Spirax', Cursive;
-	font-size: 8vw;
+	font-family: 'Milonga', Cursive;
+	font-size: 160px;
 	font-weight: normal;
+	margin: 0;
 }
 
 h2{
-	font-family: 'Kurale', serif;
-	font-size: 3vw;
+	font-family: 'Milonga', serif;
+	font-size: 120px;
 	font-weight: normal;
 	font-style: normal;
-	margin-bottom: -1.5vw;
+	line-height: 150px;
+	margin: 0;
 }
 
 h3 {
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Milonga', serif;
 	font-size: 1.4vw;
 	font-weight: 700;
 	font-style: normal;
+	margin: 0;
 }
 
 h4 {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.4vw;
-	font-weight: 400;
+	font-size: 26px;
+	line-height: 36px;
+	font-weight: 700;
 	font-style: normal;
+	margin: 0;
 }
 
 h5 {
-	font-family: 'Roboto Mono', monospace;
 	font-size: 1.4vw;
 	font-weight: 500;
 	font-style: normal;
+	margin: 0;
 }
 
 p {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.4vw;
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	line-height: 33px;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -66,6 +76,11 @@ hr {
 /* UTILITY */
 .inverted-text {
 	color: var(--inverted-color);
+}
+
+.section-title {
+	font-style: normal;
+	font-weight: normal;
 }
 
 /* NAVIGATION */
@@ -197,8 +212,18 @@ hr {
 	padding-top: 50px;
 }
 
-.about-content {
+#about-content {
 	max-width: 50vw;
+	text-align: left;
+}
+
+#about-content > .section-title {
+	margin-bottom: 21px;
+}
+
+#about-text {
+	font-size: 32px;
+	line-height: 44px;
 }
 
 .button {
@@ -221,7 +246,7 @@ hr {
 	margin-bottom: 15vw;
 }
 
-.schedule-title {
+#schedule-content > .section-title {
 	margin-bottom: 1vw;
 }
 
@@ -232,7 +257,7 @@ hr {
 	background-color: #f5f5f5;
 }
 
-.schedule-content {
+#schedule-content {
 	width: 32.5vw;
 	margin-left: 12.5vw;
 }
@@ -241,8 +266,16 @@ hr {
 	margin-bottom: 5vw;
 }
 
+.schedule-block > h3 {
+	/* Inefficient? Should I just do ID? */
+	font-size: 32px;
+	line-height: 40px;
+}
+
 .schedule-item {
-	margin-bottom: -2vw;
+	height: 33px;
+	font-size: 24px;
+	line-height: 33px;
 }
 
 .schedule-times {
@@ -273,6 +306,11 @@ hr {
 	justify-content: center;
 }
 
+#sponsors-title {
+	font-size: 100px;
+	line-height: 125px;
+}
+
 .sponsor-icon {
 	margin-left: 1vw;
 	margin-right: 1vw;
@@ -282,11 +320,15 @@ hr {
 	background-color: #f5f5f5;
 }
 
-.sponsor-note {
+#sponsor-note {
 	margin-top: 4.5vw;
 	max-width: 75vw;
 	align-self: center;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 44px;
 }
+
 
 
 /* FAQS SECTION */
@@ -298,13 +340,15 @@ hr {
 	margin-bottom: 15vw;
 }
 
-.faqs-title {
+#faqs-content > .section-title {
 	margin-bottom: 1.5vw;
 }
 
-.faqs-content {
+#faqs-content {
 	width: 37.5vw;
 	margin-left: 12.5vw;
+	font-size: 33px;
+	line-height: 36px;
 }
 
 .faqs-illo {
@@ -318,19 +362,16 @@ hr {
 	margin-bottom: 2.5vw;
 }
 
-.faqs-question {
-	margin-bottom: -1vw;
-}
-
 /* FOOTER */
 footer {
 	display: flex;
 	flex-direction: column;
 	background-color: #f5f5f5;
 	padding-top: 75px;
+	color: var(--primary-dark);
 }
 
-.footer-content {
+#footer-content {
 	width: 75vw;
 	display: flex;
 	flex-direction: row;
@@ -342,8 +383,14 @@ footer {
 	width: 37.5vw;
 }
 
-.footer-question {
-	margin-bottom: -2.25vw;
+#footer-question {
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 15px;
+}
+
+#footer-reach-out {
+	font-weight: 600;
 }
 
 .content-right {
@@ -411,7 +458,7 @@ footer {
 	}
 
 	/* ABOUT SECTION */
-	.about-content {
+	#about-content {
 		max-width: 75vw;
 	}
 
@@ -425,7 +472,7 @@ footer {
 		display: none;
 	}
 
-	.schedule-content {
+	#schedule-content {
 		margin-left: auto;
 		margin-right: 10vw;
 		width: 40vw;
@@ -446,7 +493,7 @@ footer {
 	}
 
 	/* FAQS SECTION */
-	.faqs-content {
+	#faqs-content {
 		width: 80vw;
 		margin-left: 10vw;
 	}
@@ -547,7 +594,7 @@ footer {
 		padding-top: 0;
 	}
 
-	.about-content {
+	#about-content {
 		max-width: 80vw;
 	}
 
