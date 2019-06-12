@@ -1,12 +1,14 @@
 body {
 	margin: 0;
+	--primary-color: #205181;
+	--inverted-color: #FFFFFF;
+	color: var(--primary-color);
 }
 
 h1 {
 	font-family: 'Spirax', Cursive;
 	font-size: 8vw;
 	font-weight: normal;
-	color: #4a4a4a;
 }
 
 h2{
@@ -14,7 +16,6 @@ h2{
 	font-size: 3vw;
 	font-weight: normal;
 	font-style: normal;
-	color: #4a4a4a;
 	margin-bottom: -1.5vw;
 }
 
@@ -23,7 +24,6 @@ h3 {
 	font-size: 1.4vw;
 	font-weight: 700;
 	font-style: normal;
-	color: #4a4a4a;
 }
 
 h4 {
@@ -31,7 +31,6 @@ h4 {
 	font-size: 1.4vw;
 	font-weight: 400;
 	font-style: normal;
-	color: #4a4a4a;
 }
 
 h5 {
@@ -39,7 +38,6 @@ h5 {
 	font-size: 1.4vw;
 	font-weight: 500;
 	font-style: normal;
-	color: #4a4a4a;
 }
 
 p {
@@ -47,7 +45,6 @@ p {
 	font-size: 1.4vw;
 	font-weight: 400;
 	font-style: normal;
-	color: #9b9b9b;
 }
 
 div {
@@ -66,12 +63,18 @@ hr {
   border-width: 1px;
 }
 
+/* UTILITY */
+.inverted-text {
+	color: var(--inverted-color);
+}
+
 /* NAVIGATION */
 #navbar {
 	height: 75px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
 	background-color: #ffffff;
 	position: -webkit-fixed;
@@ -85,7 +88,7 @@ hr {
 }
 
 
-.nav-logo-container {
+#nav-logo-container {
 	margin-left: 5vw;
 	margin-right: 75px;
 }
@@ -94,12 +97,17 @@ hr {
 	height: 38px;
 }
 
-.nav-links {
+#nav-links {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+	flex: 1 1 auto;
 }
 
 .nav-link {
+	color: var(--primary-color);
+	font-size: 24px;
+	line-height: 28px;
 	cursor: pointer;
 }
 
@@ -107,9 +115,20 @@ hr {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 18px;
 	font-weight: 400;
-	color: #4a4a4a;
 	text-decoration: none;
 	margin-right: 50px;
+}
+
+#mlh-trust-badge {
+	display: block;
+	position: relative;
+	top: 25px;
+	width: 70px;
+	z-index: 10000;
+}
+
+#mlh-trust-badge img {
+	width: 100%;
 }
 
 .nav-register {
@@ -131,7 +150,6 @@ hr {
 	font-size: 16px;
 	font-weight: 500;
 	font-style: normal;
-	color: #4a4a4a;
 	padding: 10px 20px;
 	border: 1.5px solid #9b9b9b;
 	background-color: transparent;
