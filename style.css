@@ -1,9 +1,15 @@
 /* TODO: mobile style check */
+/* TODO: Registration button */
+/* Navbar styling */
 body {
 	margin: 0;
 	--primary-color: #205181;
 	--primary-dark: #0F2942;
-	--inverted-color: #FF00FF;
+	--inverted-color: #FFFFFF;
+	--sky-blue: #92E4E1;
+	--dark-blue: #0F2942;
+	--faq-blue: #CFECF9;
+	--grassy: #A9E293;
 	color: var(--primary-color);
 	font-family: 'Source Serif Pro', serif;
 	font-size: 24px;
@@ -184,15 +190,16 @@ hr {
 	display: inline-block;
 }
 
-
-/* HERO SECTION */
-#hero {
-	background-image: url(../assets/Splash\ BG.svg);
-	background-color: #f5f5f5;
+.illo-base {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	height: 100vh;
+}
+
+/* HERO SECTION */
+#hero {
+	background-color: var(--sky-blue);
+	text-align: center;
 }
 
 .hero-illo {
@@ -201,10 +208,13 @@ hr {
 	justify-content: center;
 	align-self: center;
 	text-align: center;
-	margin-top: 75px;
-	width: 95vw;
-	height: 87.5vh;
-	background-color: #ffffff;
+	width: 100%;
+	height: 1000px;
+	background-image: url(./assets/illos/hero/base.svg);
+}
+
+#hero-text {
+	margin-top: 610px;
 }
 
 /* ABOUT SECTION */
@@ -213,9 +223,10 @@ hr {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 90vh;
+	height: 1500px;
 	/* fixing jump to in-page anchor */
-	padding-top: 50px;
+	background-image: url(./assets/illos/forest/base.svg);
+	background-color: var(--dark-blue);
 }
 
 #about-content {
@@ -249,7 +260,7 @@ hr {
 	flex-direction: row;
 	/* fixing jump to in-page anchor */
 	padding-top: 150px;
-	margin-bottom: 15vw;
+	background-color: var(--dark-blue);
 }
 
 #schedule-content > .section-title {
@@ -266,6 +277,7 @@ hr {
 #schedule-content {
 	width: 32.5vw;
 	margin-left: 12.5vw;
+	margin-bottom: 120px;
 }
 
 .schedule-block {
@@ -293,7 +305,7 @@ hr {
 	text-align: center;
 	/* fixing jump to in-page anchor */
 	padding-top: 100px;
-	margin-bottom: 15vw;
+	background-color: var(--dark-blue);
 }
 
 .sponsors-container {
@@ -322,6 +334,7 @@ hr {
 
 #sponsor-note {
 	margin-top: 4.5vw;
+	margin-bottom: 90px;
 	max-width: 75vw;
 	align-self: center;
 	font-weight: 600;
@@ -335,8 +348,8 @@ hr {
 	display: flex;
 	flex-direction: row;
 	/* fixing jump to in-page anchor */
-	padding-top: 150px;
-	margin-bottom: 15vw;
+	/* margin-bottom: 15vw; */
+	background-color: var(--faq-blue);
 }
 
 #faqs-content > .section-title {
@@ -348,6 +361,7 @@ hr {
 	margin-left: 12.5vw;
 	font-size: 26px;
 	line-height: 36px;
+	padding-top: 450px;
 }
 
 .faqs-illo {
@@ -367,7 +381,12 @@ footer {
 	flex-direction: column;
 	background-color: #f5f5f5;
 	padding-top: 75px;
+	background-color: var(--grassy);
 	color: var(--primary-dark);
+	margin: auto;
+}
+
+#footer-wrapper {
 	width: 75%;
 	margin: auto;
 }
@@ -400,7 +419,8 @@ footer {
 
 #footer-gt-student {
 	margin-top: 1vw;
-	width: 540px;
+	width: 480px;
+	flex: 1 1 auto;
 	margin-bottom: 20px;
 }
 
@@ -426,6 +446,7 @@ footer {
 	height: 48px;
 	margin-right: 27px;
 	transition: transform 0.5s;
+	fill: var(--primary-color)
 }
 .social-row > a > img:hover {
 	transform: scale(1.2);
@@ -575,22 +596,27 @@ footer {
 
 @media only screen and (max-width: 768px) {
 	h1 {
-		font-size: 16vw;
+		font-size: 48px;
+		line-height: 60px;
 	}
 
 	h2{
 		font-size: 8vw;
 	}
 
-	h3, h4, h5, p {
+	h3 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	h4, h5, p {
 		font-size: 4vw;
 	}
 
 	/* HERO SECTION */
 	#hero-text {
-		margin-top: -2.5vw;
-		margin-bottom: -8vw;
-	}
+		margin-top: 216px;
+		}
 
 	/* ABOUT SECTION */
 	#about {
