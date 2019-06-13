@@ -13,6 +13,7 @@ body {
 h1 {
 	font-family: 'Milonga', Cursive;
 	font-size: 160px;
+	line-height: 200px;
 	font-weight: normal;
 	margin: 0;
 }
@@ -206,12 +207,6 @@ hr {
 	background-color: #ffffff;
 }
 
-#hero-text {
-	margin-top: -2.5vw;
-	margin-bottom: -2.5vw;
-}
-
-
 /* ABOUT SECTION */
 #about {
 	display: flex;
@@ -382,12 +377,14 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	flex-wrap: wrap-reverse;
 	align-self: center;
 	margin-bottom: 60px;
 }
 
 #footer-questions-section {
-	width: 37.5vw;
+	flex: 1 1 auto;
+	width: 423px;
 }
 
 #footer-question {
@@ -403,7 +400,7 @@ footer {
 
 #footer-gt-student {
 	margin-top: 1vw;
-	width: 37.5vw;
+	width: 540px;
 	margin-bottom: 20px;
 }
 
@@ -460,8 +457,6 @@ footer {
 	}
 
 	#hero-text {
-		margin-top: -2.5vw;
-		margin-bottom: -2.5vw;
 	}
 
 	/* ABOUT SECTION */
@@ -521,23 +516,22 @@ footer {
 	footer {
 		padding-top: 15vw;
 		width: 100%;
-		flex-direction: column-reverse;
 	}
 
-	.footer-content {
-		flex-direction: column-reverse;
-		width: 80vw;
-		margin-bottom: 5vw;
+	#footer-content {
+		margin-bottom: 8px;
+		width: 100%;
+		text-align: center;
 	}
 
 	#footer-questions-section {
-		width: 423px;
-		flex: 1 1 auto;
+		width: 100%;
 	}
 
 	#footer-gt-student {
 		margin-top: -2.5vw;
-		width: 540px;
+		width: 100%;
+		order: 1;
 	}
 
 	.footer-question {
@@ -680,5 +674,12 @@ footer {
 
 	.content-right {
 		margin-top: -6vw;
+	}
+
+	.social-row > a > img {
+		width: 24px;
+		height: 24px;
+		margin-right: 17px;
+		transition: transform 0.5s;
 	}
 }
