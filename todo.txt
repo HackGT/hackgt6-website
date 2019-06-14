@@ -1,0 +1,13 @@
+<!-- TODO replace MLH badge with 2020 asset -->
+<!-- TODO fixup footer (flex) -->
+<!-- TODO responsiveness QA tests and accessibility (tabbing) -->
+
+- black overlay for forest text
+- parallax for cards
+- Something for initial sponsors
+- Proper positioning of assets in static view
+
+- Proper navbar integration (pending design)
+
+- Accessibility
+- Mobile compatibility

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- TODO responsiveness QA tests and accessibility (tabbing) -->
-<!-- TODO replace MLH badge with 2020 asset -->
-<!-- TODO fixup footer (flex) -->
 <head>
 	<title>HackGT 2019: Into the Rabbit Hole</title>
 	<link rel="stylesheet" href="style.css">
@@ -34,10 +31,6 @@
 				<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg">
 			</a>
 		</div>
-		<!-- <div class="nav-register">
-			<p class="nav-register-info">Registration ends soon!</p>
-			<a href="#about"><button class="nav-button">Register</button></a>
-		</div> -->
 	</div>
 
 	<section id="hero">
@@ -46,16 +39,21 @@
 		<div class="hero-illo illo-base"></div>
 	</section>
 
-	<section class="illo-base" id="about">
+	<div id="forest-illo-base" class="illo-base" ></div>
+
+	<section id="about">
 		<div id="about-content" class="section-content inverted-text">
 			<h2 class="section-title inverted-text">Welcome to Wonderland</h2>
-			<p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada libero, sed blandit ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-			<a href="#about"><button class="button">Register</button></a>
+			<p id="about-text">Lorem ipsum dolsor sit amet, consectetur adipiscing elit. Ut at malesuada libero, sed blandit ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			<div class="button-wrapper">
+				<a href="https://registration.hack.gt"><button class="button">Register</button></a>
+			</div>
 		</div>
 	</section>
 
-	<section class="illo-base" id="schedule">
-		<div class="schedule-illo"></div>
+	<section id="schedule">
+		<div id="schedule-illo" class="illo-base"></div>
+		<div id="mushrooms-illo" class="illo-base"></div>
 		<div id="schedule-content" class="section-content inverted-text">
 			<h2 id="schedule-title" class="section-title">Schedule</h2>
 			<div class="schedule-block">
@@ -128,22 +126,24 @@
 	</section>
 
 	<section id="sponsors">
-		<h2 id="sponsors-title" class="section-title inverted-text">Thanks to our sponsors</h2>
-		<div class="sponsors-container">
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
-			<div class="sponsor-icon"></div>
+		<div class="inverted-text">
+			<h2 id="sponsors-title" class="section-title">Thanks to our sponsors</h2>
+			<div id="sponsors-container">
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+				<div class="sponsor-icon"></div>
+			</div>
+			<h4 id="sponsor-note">Interested in sponsoring? Email us at sponsorship@hack.gt</h4>
 		</div>
-		<h4 id="sponsor-note">Interested in sponsoring? Email us at sponsorship@hack.gt</h5>
 	</section>
 
 	<section id="faqs">
@@ -182,6 +182,12 @@
 	</section>
 
 	<footer>
+		<div id="footer-illo">
+			<div id="footer-illo-blue"></div>
+			<div id="footer-illo-castle">
+				<img src="assets/illos/footer/base.svg" />
+			</div>
+		</div>
 		<div id="footer-wrapper">
 			<div id="footer-content" class="section-content">
 				<div id="footer-questions-section">
