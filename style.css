@@ -514,7 +514,12 @@ footer {
 	}
 
 	h3, h4, h5, p {
-		font-size: 2.1vw;
+		/* font-size: 2.1vw; */
+	}
+
+	h5, p {
+		font-size: 16px;
+		line-height: 22px;
 	}
 
 	/* NAVIGATION */
@@ -559,6 +564,12 @@ footer {
 		max-width: 90vw;
 	}
 
+	#sponsors-title {
+		font-size: 3em;
+		line-height: 1em;
+	}
+
+
 	.sponsor-icon {
 		width: 20vw;
 		height: 12vw;
@@ -572,6 +583,11 @@ footer {
 	#faqs-content {
 		width: 80vw;
 		margin-left: 10vw;
+		text-align: left;
+	}
+
+	#faqs-content > .section-title {
+		text-align: center;
 	}
 
 	.faqs-illo {
@@ -588,8 +604,11 @@ footer {
 
 	/* FOOTER */
 	footer {
-		padding-top: 15vw;
 		width: 100%;
+	}
+
+	#footer-illo-blue {
+		height: 200px;
 	}
 
 	#footer-content {
@@ -669,7 +688,7 @@ footer {
 	}
 
 	h4, h5, p {
-		font-size: 1em;
+		/* font-size: 1em; */
 	}
 
 	.section-content {
