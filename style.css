@@ -247,20 +247,20 @@ hr {
 #about-text {
 	font-size: 32px;
 	line-height: 44px;
-	margin-bottom: 200px;
+	margin-bottom: 32px;
 	max-width: 535px;
 }
 
 .button {
 	font-weight: 600;
 	color:var(--primary-dark);
-	padding: 10px 50px;
+	padding: 20px 40px;
 	/* border: 1.5px solid #9b9b9b; */
-	height: 60px;
 	background-color: var(--inverted-color);
 	 /* transparent; */
-	font-size: 24px;
-	line-height: 33px;
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: 1.8px;
 	font-family: 'Source Serif Pro', serif;
 }
 
@@ -270,9 +270,12 @@ hr {
 	flex-direction: row;
 	background-color: transparent;
 	height: auto;
+	margin: 80px 0 100px;
 }
 
 #schedule-content > .section-title {
+	position: relative;
+	left: -20%;
 	margin-bottom: 1vw;
 }
 
@@ -285,8 +288,9 @@ hr {
 }
 
 #mushrooms-illo {
-	width: 40%;
+	width: 45%;
 	height: auto;
+	background-position: 50% 60%;
 	background-size: contain;
 	background-image: url(./assets/illos/forest/shrooms.svg);
 	position: relative;
@@ -296,17 +300,15 @@ hr {
 #schedule-content {
 	width: 32.5vw;
 	margin-left: 90px;
-	margin-bottom: 120px;
 	background-color: transparent;
 }
 
 .schedule-block {
-	margin-bottom: 5vw;
+	margin-bottom: 2em;
 }
 
 .schedule-item {
-	display: flex;
-	height: 33px;
+	display: flex; /* we shouldn't wrap, but just in case */
 	font-size: 24px;
 	line-height: 33px;
 }
@@ -325,7 +327,7 @@ hr {
 #sponsors {
 	text-align: center;
 	/* fixing jump to in-page anchor */
-	padding-top: 100px;
+	margin-top: 100px;
 	background-color: var(--dark-blue);
 }
 
@@ -407,7 +409,6 @@ footer {
 }
 
 #footer-illo {
-	height: 1400px;
 }
 
 #footer-illo-blue {
@@ -462,8 +463,7 @@ footer {
 
 #footer-gt-student {
 	margin-top: 1vw;
-	width: 480px;
-	flex: 1 1 auto;
+	flex: 1 1 40%;
 	margin-bottom: 20px;
 }
 
@@ -526,6 +526,7 @@ footer {
 	/* ABOUT SECTION */
 	#about-content {
 		max-width: 75vw;
+		margin-bottom: 29px;
 	}
 
 	.button {
@@ -687,7 +688,8 @@ footer {
 	}
 
 	.button {
-		font-size: 4vw;
+		font-size: 24px;
+		line-height: 33px;;
 		border: none;
 		margin: auto;
 		/* border: 1px solid #9b9b9b; */
