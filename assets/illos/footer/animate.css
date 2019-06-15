@@ -1,0 +1,19 @@
+#clip-rect-heart {
+    animation-name: move-part-1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-part-1 {
+    from {
+        transform: rotate(-30deg);
+        y: 810px;
+        x: -275px;
+    }
+    to {
+        transform: rotate(180deg);
+        y: -1500px;
+        x: -1500px;
+        width: 2500px;
+    }
+}
