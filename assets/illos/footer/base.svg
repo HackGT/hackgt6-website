@@ -1,4 +1,4 @@
-<?xml-stylesheet type="text/css" href="animate.css"?>
+<?xml-stylesheet type="text/css" href="../../../animate.css"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1567.84 1835.76">
     <defs>
         <style>
@@ -59,8 +59,8 @@
         </clipPath>
     </defs>
     <title>Slide 11 - Just CastleAsset 1</title>
-    <g id="heart">
-        <image x="120" y="35" width="1300" href="heartBehindCastle.svg" clip-path="url(#cut-off-bottom-heart)"/>
+    <g>
+        <image id="heart" style="visibility: hidden;" x="120" y="35" width="1300" href="heartBehindCastle.svg" clip-path="url(#cut-off-bottom-heart)"/>
     </g>
     <g id="Layer_2" data-name="Layer 2">
         <g id="Draw_Layer" data-name="Draw Layer"><path

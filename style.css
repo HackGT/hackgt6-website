@@ -397,7 +397,7 @@ hr {
 	margin-left: 12.5vw;
 	width: 25vw;
 	height: auto;
-	background-color: #f5f5f5;
+	background-color: var(--faq-blue);
 }
 
 .faqs-item {
