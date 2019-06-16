@@ -8,6 +8,12 @@
     visibility: visible !important;
 }
 
+#sun {
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 #cloud-1 {
     animation-name: moverightCloud1;
     animation-duration: 300s;
@@ -43,20 +49,24 @@
     animation-iteration-count: infinite;
 }
 
-#clip-rect-path-1 {
+#path-1, #path-2, #path-3 {
+    visibility: hidden;
+}
+
+.animatePath1 {
     animation-name: expose-path-1;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-#clip-rect-path-2 {
+.animatePath2 {
     animation-name: expose-path-2;
     animation-duration: 2s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
-#clip-rect-path-3 {
+.animatePath3 {
     animation-name: expose-path-3;
     animation-duration: 3s;
     animation-delay: 1.75s;
@@ -98,6 +108,17 @@
     animation-fill-mode: forwards;
     position: relative;
     left: 100px;
+}
+
+@keyframes enter-from-right {
+    from {
+        x: 2500;
+        y: 120;
+    }
+    to {
+        x: 1800;
+        y: 80;
+    }
 }
 
 @keyframes swivel-left-diamond-bear-card {
