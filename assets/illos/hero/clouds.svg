@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="animate.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2048">
+    <g id="clouds">
+        <image x="-750" y="100" id="cloud-1" width="750" href="cloud-1.svg"/>
+        <!-- <image href="cloud-2.svg"/>
+        <image href="cloud-3.svg"/>
+        <image href="cloud-4.svg"/> -->
+    </g>
+</svg>
