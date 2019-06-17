@@ -1,13 +1,14 @@
-<!-- TODO replace MLH badge with 2020 asset -->
-<!-- TODO fixup footer (flex) -->
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 
+Must do
+- !! add cat illo verify mushroom illo as svg illo not background
 - black overlay for forest text
+- bring in final assets (transition elements) from alicia
+- replace logo assets (header footer) and social icon
+- copy check/QA review
+<!-- TODO replace MLH badge with 2020 asset -->
+
+ICED
 - parallax for cards
-- Something for initial sponsors
-- Proper positioning of assets in static view
-
-- Proper navbar integration (pending design)
-
+- fallback alt text
 - Accessibility
-- Mobile compatibility
