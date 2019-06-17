@@ -1,0 +1,345 @@
+.animateHeart {
+    animation-name: move-part-1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.display {
+    visibility: visible !important;
+}
+
+#sun {
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#cloud-1 {
+    animation-name: moverightCloud1;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-2 {
+    animation-name: moverightCloud2;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-3 {
+    animation-name: moverightCloud3;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-4 {
+    animation-name: moverightCloud4;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-5 {
+    animation-name: moverightCloud5;
+    animation-duration: 400s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#path-1, #path-2, #path-3 {
+    visibility: hidden;
+}
+
+.animatePath1 {
+    animation-name: expose-path-1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.animatePath2 {
+    animation-name: expose-path-2;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.animatePath3 {
+    animation-name: expose-path-3;
+    animation-duration: 3s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+#diamondBearCard, #evilQueenCard, #jesterBearCard, #clubKingCard{
+    visibility: hidden;
+}
+
+.animateDiamondBearCard {
+    visibility: visible !important;
+	width: 500px;
+    transform: rotate(-30deg);
+    animation-name: swivel-left-diamond-bear-card;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+.animateEvilQueenCard {
+	animation-name: swivel-left-evil-queen-card;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+.animateJesterBearCard {
+	width: 200px;
+    animation-name: swivel-left-jester-bear-card;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+.animateClubKingCard {
+    animation-name: swivel-left-club-king-card;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    left: 100px;
+}
+
+@keyframes enter-from-right {
+    from {
+        x: 2500;
+        y: 120;
+    }
+    to {
+        x: 1800;
+        y: 80;
+    }
+}
+
+@keyframes swivel-left-diamond-bear-card {
+    from {
+        transform: rotate(-90deg);
+        left: 500px;
+        top: -500px;
+    }
+    to {
+        transform: rotate(-30deg);
+        left: -150px;
+        top: 0px;
+    }
+}
+
+@keyframes swivel-left-evil-queen-card {
+    from {
+        transform: rotate(0deg);
+        left: 500px;
+        top: 100px;
+    }
+    to {
+        transform: rotate(20deg);
+        left: 0px;
+		top: 150px;
+    }
+}
+
+@keyframes swivel-left-jester-bear-card {
+    from {
+        transform: rotate(-70deg);
+        left: 300px;
+        top: -400px;
+    }
+    to {
+        transform: rotate(-10deg);
+        left: -100px;
+        top: 250px;
+    }
+}
+
+@keyframes swivel-left-club-king-card {
+    from {
+        transform: rotate(0deg);
+        left: 500px;
+        top: 500px;
+    }
+    to {
+        transform: rotate(35deg);
+        left: 100px;
+        top: 100px;
+    }
+}
+
+@keyframes move-part-1 {
+    from {
+        transform: rotate(-30deg);
+        y: 810px;
+        x: -275px;
+    }
+    to {
+        transform: rotate(180deg);
+        y: -1500px;
+        x: -1500px;
+        width: 2500px;
+    }
+}
+
+@keyframes expose-path-1 {
+    from {
+        y:-400px;
+        height: 300px;
+        transform: rotate(45deg);
+    }
+    to {
+        x: 490px;
+        y: 500px;
+        width: 5000px;
+        height: 600px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes expose-path-2 {
+    from {
+        x: 600px;
+        y: 1050px;
+        height: 0px;
+        transform: rotate(0deg);
+    }
+
+    to {
+        x: -500px;
+        y: 1200px;
+        height: 1000px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes expose-path-3 {
+    from {
+        x: 600px;
+        y: 1300px;
+        height: 0px;
+        transform: rotate(-30deg);
+    }
+
+    to {
+        x: -500px;
+        y: 1300px;
+        height: 700px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes moverightCloud1 {
+    0% {
+        transform: translate(0,0);
+    }
+
+    60% {
+        transform: translate(2800px,0);
+    }
+
+    61% {
+        transform: translate(2800px, 1000px);
+    }
+
+    62% {
+        transform: translate(-850px, 1000px);
+    }
+
+    80% {
+        transform: translate(-850px, 0px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(2000px, 0);
+    }
+    51% {
+        transform: translate(2000px, 1000px);
+    }
+    52% {
+        transform: translate(-1500px, 1000px);
+    }
+    60% {
+        transform: translate(-1500px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(1000px, 0);
+    }
+    51% {
+        transform: translate(1000px, 1000px);
+    }
+    52% {
+        transform: translate(-3000px, 1000px);
+    }
+    60% {
+        transform: translate(-3000px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(750px, 0);
+    }
+    41% {
+        transform: translate(750px, 1000px);
+    }
+    42% {
+        transform: translate(-3000px, 1000px);
+    }
+    43% {
+        transform: translate(-3000px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(5000px, 0);
+    }
+    51% {
+        transform: translate(5000px, 1000px);
+    }
+    52% {
+        transform: translate(-1500px, 1000px);
+    }
+    60% {
+        transform: translate(-1500px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}

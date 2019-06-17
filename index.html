@@ -3,6 +3,7 @@
 <head>
 	<title>HackGT 2019: Into the Rabbit Hole</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animate.css">
 	<link rel="icon" type="image/png" href="assets/hackgt_logos/hackgt_favicon.png">
 	<link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Milonga" rel="stylesheet">
@@ -36,7 +37,9 @@
 	<section id="hero">
 		<h1 id="hero-text">HackGT6</h1>
 		<h3 id="hero-subtext">Into the Rabbit Hole</h3>
-		<div class="hero-illo illo-base"></div>
+		<!-- <div class="hero-illo illo-base"></div> -->
+		<object id="paths" type="image/svg+xml" data="assets/illos/hero/base.svg">
+		</object>
 	</section>
 
 	<div id="forest-illo-base" class="illo-base" ></div>
@@ -52,7 +55,8 @@
 	</section>
 
 	<section id="schedule">
-		<div id="schedule-illo" class="illo-base"></div>
+		<div id="schedule-illo" class="illo-base">
+		</div>
 		<div id="mushrooms-illo" class="illo-base"></div>
 		<div id="schedule-content" class="section-content inverted-text">
 			<h2 id="schedule-title" class="section-title">Schedule</h2>
@@ -178,14 +182,23 @@
 				<p>True to the spirit of hackathons, you may not submit your past projects to HackGT.</p>
 			</div>
 		</div>
-		<div class="faqs-illo"></div>
+		<div class="faqs-illo">
+			<object id="diamondBearCard" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
+			</object>
+			<object id="evilQueenCard" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
+			</object>
+			<object id="jesterBearCard" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
+			</object>
+			<object id="clubKingCard" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
+			</object>
+		</div>
 	</section>
 
 	<footer>
 		<div id="footer-illo">
 			<div id="footer-illo-blue"></div>
 			<div id="footer-illo-castle">
-				<img src="assets/illos/footer/base.svg" />
+				<object id="heart" type="image/svg+xml" data="assets/illos/footer/base.svg" />
 			</div>
 		</div>
 		<div id="footer-wrapper">
@@ -222,4 +235,5 @@
 		</div>
 	</footer>
 	<script src="index.js"></script>
+	<script src="animations.js"></script>
 </body>
