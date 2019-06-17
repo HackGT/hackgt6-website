@@ -8,4 +8,3 @@ Must do
 ICED
 - parallax for cards
 - fallback alt text
-- Accessibility
