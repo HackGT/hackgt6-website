@@ -154,7 +154,7 @@ hr {
 	flex-direction: row;
 	justify-content: space-around;
 	flex: 1 1 auto;
-	max-width: 75vw; /* TODO: Adjust this per final layout */
+	max-width: 55vw; /* TODO: Adjust this per final layout */
 }
 
 .nav-link {
@@ -266,13 +266,34 @@ hr {
 	background-color: var(--dark-blue);
 	position: absolute;
 	width: 100%;
-	height: 3000px;
+	height: 2700px;
 	z-index: -50;
+}
+
+#forest-illo-base::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
+	/* background: rgba(0,0,0,0.1); */
+	z-index: -49;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#cat-illo {
+	width: 400px;
+	height: auto;
+	position: relative;
+	top: 220px;
+	right: 0vw; /* TODO: cat tail is getting cut off... */
 }
 
 #about {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	text-align: center;
 	/* fixing jump to in-page anchor */
 	padding-top: 436px;
@@ -299,7 +320,7 @@ hr {
 .button {
 	font-weight: 600;
 	color:var(--primary-dark);
-	padding: 20px 40px;
+	padding: .6em 1.5em;
 	/* border: 1.5px solid #9b9b9b; */
 	background-color: var(--inverted-color);
 	 /* transparent; */
@@ -322,7 +343,7 @@ hr {
 	flex-direction: row;
 	background-color: transparent;
 	height: auto;
-	margin: 80px 0 -1px;
+	margin: 10px 0 -1px;
 }
 
 #schedule-content > .section-title {
@@ -531,7 +552,9 @@ footer {
 }
 
 .footer-logo {
-	height: 3.5vw;
+	height: 44px;
+	position: relative;
+	top: -10px;
 }
 
 .social-row > a > img {
@@ -576,7 +599,11 @@ footer {
 
 	.button {
 		font-size: 2.1vw;
-		padding: 1em 10em;
+		padding: 1em 4em;
+	}
+
+	#cat-illo {
+		display: none;
 	}
 
 	/* SCHEDULE SECTION */
@@ -684,7 +711,7 @@ footer {
 	}
 
 	.footer-logo {
-		height: 8vw;
+		height: 1em;
 	}
 }
 
