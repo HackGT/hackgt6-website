@@ -1,8 +1,6 @@
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 
 Must do
-- !! add cat illo verify mushroom illo as svg illo not background
-- black overlay for forest text
 - bring in final assets (transition elements) from alicia
 - replace logo assets (header footer)
 - copy check/QA review

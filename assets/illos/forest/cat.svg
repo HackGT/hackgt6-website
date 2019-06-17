@@ -43,7 +43,7 @@
             from {
                 -webkit-transform: rotate(15deg);
             }
-            
+
             to {
                 -webkit-transform: rotate(-15deg);
             }
@@ -51,7 +51,7 @@
     </style>
     <filter id="glowingPulse2">
       <!--Blur effect-->
-      <feGaussianBlur stdDeviation="100" result="spec2">
+      <feGaussianBlur stdDeviation="10" result="spec2">
         <animate attributeName="stdDeviation"
                  from="0" to="40"
                  dur="5s"

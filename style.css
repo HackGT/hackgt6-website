@@ -74,8 +74,8 @@ p {
 	font-style: normal;
 }
 
-div {
-	display: block;
+a {
+	text-decoration: none;
 }
 
 section {
@@ -773,18 +773,8 @@ footer {
 	}
 
 	#about-text {
-		margin: auto;
+		margin: auto auto 29px;
 		max-width: 90%;
-	}
-
-	.button-wrapper {
-		margin: auto;
-		margin-top: 29px;
-		display: flex;
-	}
-
-	.button-wrapper > a {
-		margin: auto;
 	}
 
 	.button {
