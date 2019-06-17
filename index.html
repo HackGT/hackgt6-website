@@ -18,18 +18,20 @@
 <body>
 
 	<div id="navbar">
-		<div id="nav-logo-container" class="nav-link">
-			<img src="assets/hackgt_logos/hackgt_logo.png" class="nav-logo" data-scroll="hero">
+		<div id="nav-logo-container" class="nav-link grow-anim">
+			<a href="#" data-scroll="hero">
+				<img src="assets/hackgt_logos/hackgt_logo.png" class="nav-logo">
+			</a>
 		</div>
 		<div id="nav-links">
-			<a class="nav-link" href="#" data-scroll="about">About</a>
-			<a class="nav-link" href="#" data-scroll="schedule">Schedule</a>
-			<a class="nav-link" href="#" data-scroll="sponsors">Sponsors</a>
-			<a class="nav-link" href="#" data-scroll="faqs">FAQs</a>
+			<a class="nav-link under-anim" href="#" data-scroll="about">About</a>
+			<a class="nav-link under-anim" href="#" data-scroll="schedule">Schedule</a>
+			<a class="nav-link under-anim" href="#" data-scroll="sponsors">Sponsors</a>
+			<a class="nav-link under-anim" href="#" data-scroll="faqs">FAQs</a>
 		</div>
 		<div id="mlh-logo-container" class="nav-link">
-			<a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white" target="_blank">
-				<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg">
+			<a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank">
+				<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-blue.svg" alt="Major League Hacking 2020 Hackathon Season" />
 			</a>
 		</div>
 	</div>
@@ -38,7 +40,7 @@
 		<h1 id="hero-text">HackGT6</h1>
 		<h3 id="hero-subtext">Into the Rabbit Hole</h3>
 		<!-- <div class="hero-illo illo-base"></div> -->
-		<object id="paths" type="image/svg+xml" data="assets/illos/hero/base.svg">
+		<object id="paths" type="image/svg+xml" data="assets/illos/hero/base.svg" tabindex="-1">
 		</object>
 	</section>
 
@@ -48,10 +50,11 @@
 		<div id="about-content" class="section-content inverted-text">
 			<h2 class="section-title inverted-text">Welcome to Wonderland</h2>
 			<p id="about-text">Lorem ipsum dolsor sit amet, consectetur adipiscing elit. Ut at malesuada libero, sed blandit ex. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-			<div class="button-wrapper">
-				<a href="https://registration.hack.gt"><button class="button">Register</button></a>
-			</div>
+			<a href="https://registration.hack.gt">
+				<button class="button" tabindex="-1">Register</button>
+			</a>
 		</div>
+		<object id="cat-illo" type="image/svg+xml" data="assets/illos/forest/cat.svg" tabindex="-1"></object>
 	</section>
 
 	<section id="schedule">
@@ -130,22 +133,13 @@
 	</section>
 
 	<section id="sponsors">
-		<div class="inverted-text">
-			<h2 id="sponsors-title" class="section-title">Thanks to our sponsors</h2>
-			<div id="sponsors-container">
+		<div class="section-content inverted-text">
+			<h2 id="sponsors-title" class="section-title">Sponsors to be announced soon!</h2>
+			<!-- <div id="sponsors-container">
 				<div class="sponsor-icon"></div>
 				<div class="sponsor-icon"></div>
 				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-				<div class="sponsor-icon"></div>
-			</div>
+			</div> -->
 			<h4 id="sponsor-note">Interested in sponsoring? Email us at sponsorship@hack.gt</h4>
 		</div>
 	</section>
@@ -183,13 +177,13 @@
 			</div>
 		</div>
 		<div class="faqs-illo">
-			<object id="diamondBearCard" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
+			<object tabindex="-1" id="diamondBearCard" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
 			</object>
-			<object id="evilQueenCard" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
+			<object tabindex="-1" id="evilQueenCard" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
 			</object>
-			<object id="jesterBearCard" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
+			<object tabindex="-1" id="jesterBearCard" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
 			</object>
-			<object id="clubKingCard" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
+			<object tabindex="-1" id="clubKingCard" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
 			</object>
 		</div>
 	</section>
@@ -211,13 +205,13 @@
 					<div id="footer-reach-out">
 						Reach out at hello@hack.gt!
 					</div>
-					<div class="social-row">
-						<a href="https://www.facebook.com/TheHackGT/"><img src="assets/social_media/facebook.svg"/></a>
-						<a href="https://github.com/hackgt"><img src="assets/social_media/github.svg"/></a>
-						<a href="https://instagram.com/thehackgt"><img src="assets/social_media/instagram.svg"/></a>
-						<a href="https://www.linkedin.com/company/hackgt"><img src="assets/social_media/linkedin.svg"/></a>
-						<a href="https://twitter.com/thehackgt"><img src="assets/social_media/twitter.svg"/></a>
-						<a href="https://hack.gt"><img src="assets/social_media/website.svg"/></a>
+					<div class="social-row" tab-index="0">
+						<a href="https://www.facebook.com/TheHackGT/"><img src="assets/social_media/facebook.svg" class="grow-anim"/></a>
+						<a href="https://github.com/hackgt"><img src="assets/social_media/github.svg" class="grow-anim"/></a>
+						<a href="https://instagram.com/thehackgt"><img src="assets/social_media/instagram.svg" class="grow-anim"/></a>
+						<a href="https://www.linkedin.com/company/hackgt"><img src="assets/social_media/linkedin.svg" class="grow-anim"/></a>
+						<a href="https://twitter.com/thehackgt"><img src="assets/social_media/twitter.svg" class="grow-anim"/></a>
+						<a href="https://hack.gt"><img src="assets/social_media/website.svg" class="grow-anim"/></a>
 					</div>
 				</div>
 				<div id="footer-gt-student">
@@ -229,7 +223,7 @@
 				<h4 id="footer-note">made with <3 by HackGT</h4>
 				<div id="footer-logo-container">
 					<a href="https://hack.gt">
-						<img src="assets/hackgt_logos/hackgt_logo.png" class="footer-logo">
+						<img src="assets/hackgt_logos/hackgt_logo.png" class="footer-logo grow-anim">
 					</a>
 				</div>
 			</div>

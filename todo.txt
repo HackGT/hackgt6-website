@@ -1,13 +1,11 @@
-<!-- TODO replace MLH badge with 2020 asset -->
-<!-- TODO fixup footer (flex) -->
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 
-- black overlay for forest text
+Must do
+- bring in final assets (transition elements) from alicia
+- replace logo assets (header footer)
+- copy check/QA review
+
+ICED
 - parallax for cards
-- Something for initial sponsors
-- Proper positioning of assets in static view
-
-- Proper navbar integration (pending design)
-
+- fallback alt text
 - Accessibility
-- Mobile compatibility

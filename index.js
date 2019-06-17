@@ -25,7 +25,9 @@ const main = () => {
     // if (getComputedStyle(document.getElementById("navbar")).display === 'none')
     // TODO set nav background to section color
     window.onscroll = () => {
-        if (cachedScroll > window.pageYOffset) {
+        if (cachedScroll > window.pageYOffset
+            || (document.activeElement
+                && document.activeElement.classList.contains('nav-link'))) { // navbar
             document.getElementById("navbar").style.top = "0";
         } else {
             document.getElementById("navbar").style.top = "-75px";

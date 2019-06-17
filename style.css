@@ -11,12 +11,15 @@ body {
 	font-family: 'Source Serif Pro', serif;
 	font-size: 24px;
 	line-height: 33px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 button {
 	font-family: 'Source Serif Pro', serif;
 	font-size: 24px;
 	line-height: 33px;
+	border: none;
 }
 
 h1 {
@@ -71,8 +74,8 @@ p {
 	font-style: normal;
 }
 
-div {
-	display: block;
+a {
+	text-decoration: none;
 }
 
 section {
@@ -103,18 +106,23 @@ hr {
 	font-weight: normal;
 }
 
+.section-content {
+	max-width: 90vw;
+	margin: auto;
+}
+
 /* NAVIGATION */
 #navbar {
+	z-index: 1000;
 	height: 75px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: rgba(255, 255, 255, .4);
-	position: -webkit-fixed;
+	background-color: rgba(255, 255, 255, .85);
+	box-shadow: 0px 5px .3em;
   	position: fixed;
-  	box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
   	margin-bottom: -75px;
 	top: 0;
 	-webkit-transition: top .7s;
@@ -126,10 +134,19 @@ hr {
 #nav-logo-container {
 	margin-left: 5vw;
 	margin-right: 75px;
+	transition: transform .3s;
 }
 
 .nav-logo {
 	height: 38px;
+}
+
+.grow-anim {
+	transition: transform .3s;
+}
+
+.grow-anim:hover {
+	transform: scale(1.05);
 }
 
 #nav-links {
@@ -137,7 +154,7 @@ hr {
 	flex-direction: row;
 	justify-content: space-around;
 	flex: 1 1 auto;
-	max-width: 75vw; /* TODO: Adjust this per final layout */
+	max-width: 55vw; /* TODO: Adjust this per final layout */
 }
 
 .nav-link {
@@ -146,6 +163,28 @@ hr {
 	font-size: 24px;
 	line-height: 28px;
 	cursor: pointer;
+}
+
+.under-anim {
+	position: relative;
+}
+
+.under-anim::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--primary-color);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.under-anim:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 #navbar a {
@@ -227,13 +266,34 @@ hr {
 	background-color: var(--dark-blue);
 	position: absolute;
 	width: 100%;
-	height: 2100px;
+	height: 2700px;
 	z-index: -50;
+}
+
+#forest-illo-base::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
+	/* background: rgba(0,0,0,0.1); */
+	z-index: -49;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#cat-illo {
+	width: 400px;
+	height: auto;
+	position: relative;
+	top: 220px;
+	right: 0vw; /* TODO: cat tail is getting cut off... */
 }
 
 #about {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	text-align: center;
 	/* fixing jump to in-page anchor */
 	padding-top: 436px;
@@ -260,7 +320,7 @@ hr {
 .button {
 	font-weight: 600;
 	color:var(--primary-dark);
-	padding: 20px 40px;
+	padding: .6em 1.5em;
 	/* border: 1.5px solid #9b9b9b; */
 	background-color: var(--inverted-color);
 	 /* transparent; */
@@ -268,6 +328,13 @@ hr {
 	line-height: 48px;
 	letter-spacing: 1.8px;
 	font-family: 'Source Serif Pro', serif;
+	transition: transform 0.3s, color 0.3s;
+	cursor: pointer;
+}
+
+.button:hover {
+	transform: scale(1.05);
+	color: var(--primary-color);
 }
 
 /* SCHEDULE SECTION */
@@ -276,7 +343,7 @@ hr {
 	flex-direction: row;
 	background-color: transparent;
 	height: auto;
-	margin: 80px 0 -1px;
+	margin: 10px 0 -1px;
 }
 
 #schedule-content > .section-title {
@@ -389,7 +456,7 @@ hr {
 	margin-left: 12.5vw;
 	font-size: 26px;
 	line-height: 36px;
-	padding-top: 450px;
+	/* padding-top: 450px; */ /* removing since it looks oddly excessive */
 	margin-bottom: 120px;
 }
 
@@ -398,6 +465,7 @@ hr {
 	width: 25vw;
 	height: auto;
 	background-color: var(--faq-blue);
+	z-index: 15;
 }
 
 .faqs-item {
@@ -412,9 +480,6 @@ footer {
 	background-color: var(--grassy);
 	color: var(--primary-dark);
 	margin: auto;
-}
-
-#footer-illo {
 }
 
 #footer-illo-blue {
@@ -487,18 +552,16 @@ footer {
 }
 
 .footer-logo {
-	height: 3.5vw;
+	height: 44px;
+	position: relative;
+	top: -10px;
 }
 
 .social-row > a > img {
 	width: 48px;
 	height: 48px;
 	margin-right: 27px;
-	transition: transform 0.5s;
 	fill: var(--primary-color)
-}
-.social-row > a > img:hover {
-	transform: scale(1.2);
 }
 
 
@@ -509,11 +572,8 @@ footer {
 	}
 
 	h2{
-		font-size: 4.5vw;
-	}
-
-	h3, h4, h5, p {
-		/* font-size: 2.1vw; */
+		font-size: 3em;
+		line-height: 1.5em;
 	}
 
 	h5, p {
@@ -531,9 +591,6 @@ footer {
 		margin-top: 6.25vh;
 	}
 
-	#hero-text {
-	}
-
 	/* ABOUT SECTION */
 	#about-content {
 		max-width: 75vw;
@@ -542,7 +599,11 @@ footer {
 
 	.button {
 		font-size: 2.1vw;
-		padding: 1em 10em;
+		padding: 1em 4em;
+	}
+
+	#cat-illo {
+		display: none;
 	}
 
 	/* SCHEDULE SECTION */
@@ -584,6 +645,7 @@ footer {
 	#faqs-content {
 		width: 80vw;
 		margin-left: 10vw;
+		padding-top: 450px;
 		text-align: left;
 	}
 
@@ -597,9 +659,6 @@ footer {
 
 	.faqs-item {
 		margin-bottom: 3vw;
-	}
-
-	.faqs-question {
 	}
 
 	/* FOOTER */
@@ -644,7 +703,7 @@ footer {
 
 	#footer-note {
 		margin: 1.5vw auto 2.5vw;
-		font-size: 2.25vw;
+		font-size: 1em;
 	}
 
 	#footer-logo-container {
@@ -652,7 +711,7 @@ footer {
 	}
 
 	.footer-logo {
-		height: 8vw;
+		height: 1em;
 	}
 }
 
@@ -691,7 +750,6 @@ footer {
 	}
 
 	.section-content {
-		margin: auto;
 		text-align: center;
 	}
 
@@ -715,24 +773,13 @@ footer {
 	}
 
 	#about-text {
-		margin: auto;
+		margin: auto auto 29px;
 		max-width: 90%;
-	}
-
-	.button-wrapper {
-		margin: auto;
-		margin-top: 29px;
-		display: flex;
-	}
-
-	.button-wrapper > a {
-		margin: auto;
 	}
 
 	.button {
 		font-size: 24px;
 		line-height: 33px;;
-		border: none;
 		margin: auto;
 		/* border: 1px solid #9b9b9b; */
 		padding: .6em 4em;
@@ -748,7 +795,7 @@ footer {
 	#mushrooms-illo {
 		position: relative;
 		left: 40%;
-		top: -120px;
+		top: -100px;
 		width: 100%;
 		height: 400px; /* TODO why is this gone */
 	}
@@ -766,11 +813,6 @@ footer {
 	.schedule-block {
 		margin-bottom: 15vw;
 		text-align: left;
-	}
-
-
-
-	.schedule-item {
 	}
 
 	/* SPONSOR SECTION */
@@ -830,4 +872,28 @@ footer {
 		margin-right: 17px;
 		transition: transform 0.5s;
 	}
+}
+
+
+/* Parallax effects */
+.parallax {
+	perspective: 1px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.parallax__layer--base {
+	transform: translateZ(0);
+}
+.parallax__layer--back {
+	transform: translateZ(-1px);
 }
