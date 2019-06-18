@@ -4,6 +4,8 @@ Must do
 - asset fixes
 - cross browser/screen testing
 - copy check/QA review
+- date (not countdown timer)
+- safari support (navbar esp)
 
 Bugs
 - Kinda funky navbar hover
