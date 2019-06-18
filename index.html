@@ -43,8 +43,9 @@
 		<object id="paths" type="image/svg+xml" data="assets/illos/hero/base.svg" tabindex="-1">
 		</object>
 	</section>
-
-	<div id="forest-illo-base" class="illo-base" ></div>
+	<div id="forest-wrapper">
+		<div id="forest-illo-base" class="illo-base" ></div>
+	</div>
 
 	<section id="about">
 		<div id="about-content" class="section-content inverted-text">
@@ -95,13 +96,13 @@
 					<span class="schedule-times">12:00 PM</span><p class="schedule-event">Lunch</p>
 				</div>
 				<div class="schedule-item">
-					<span class="schedule-times">03:00 PM</span><p class="schedule-event">Lunch(again!)</p>
+					<span class="schedule-times">03:00 PM</span><p class="schedule-event">Lunch (again!)</p>
 				</div>
 				<div class="schedule-item">
 					<span class="schedule-times">06:00 PM</span><p class="schedule-event">Dinner</p>
 				</div>
 				<div class="schedule-item">
-					<span class="schedule-times">09:00 PM</span><p class="schedule-event">Dinner(again!)</p>
+					<span class="schedule-times">09:00 PM</span><p class="schedule-event">Dinner (again!)</p>
 				</div>
 			</div>
 			<div class="schedule-block">
@@ -134,7 +135,7 @@
 
 	<section id="sponsors">
 		<div class="section-content inverted-text">
-			<h2 id="sponsors-title" class="section-title">Sponsors to be announced soon!</h2>
+			<h3 id="sponsors-title" class="section-title">Sponsors to be announced soon!</h3>
 			<!-- <div id="sponsors-container">
 				<div class="sponsor-icon"></div>
 				<div class="sponsor-icon"></div>
@@ -145,35 +146,50 @@
 	</section>
 
 	<section id="faqs">
-		<div id="faqs-content" class="section-content">
-			<h2 class="section-title">FAQs</h2>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Where is HackGT6?</h5>
-				<p class="faqs-answer">The event will take place on Georgia Tech’s campus in the Klaus Advanced Computing Building.</p>
+		<div id="faqs-wrapper">
+			<!-- quick hack for mobile-->
+			<div id="faqs-cards-top" class="mobile">
+				<object tabindex="-1" id="diamond-mobile" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
+				</object>
+				<object tabindex="-1" id="queen-mobile" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
+				</object>
 			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">What should I bring?</h5>
-				<p>Bring your laptop, charger, headphones, and anything else you need. We’ll supply hardware, meals, snacks, and anything else you might need.</p>
+			<div id="faqs-content" class="section-content">
+				<h2 class="section-title">FAQs</h2>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Where is HackGT6?</h5>
+					<p class="faqs-answer">The event will take place on Georgia Tech's campus in the Klaus Advanced Computing Building.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">What should I bring?</h5>
+					<p>Bring your laptop, charger, headphones, and anything else you need. We'll supply hardware, meals, snacks.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Who is eligible to participate?</h5>
+					<p>Any student over the age of 18 enrolled in a college or university is allowed to participate. Teams can be up to four members - you can register with your team when you apply, any time after you're accepted, or create a team at the event! If you are younger than 18, but a Georgia Tech student, you can still participate.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Who is eligible to mentor/volunteer?</h5>
+					<p>Anyone can mentor or volunteer. If you are interested in helping participants through their projects, then apply as a mentor. If you are interested in helping us run the event, then apply as a volunteer.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Do I need any experience to apply?</h5>
+					<p>No! Experience is not required. Hackathons are open environments for everyone. Check out our submissions from last year, including a multi-language transcompiler, a hackathon team finder, and a video frame finder.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Are there any costs?</h5>
+					<p>HackGT provides food, swag, mentors, and more. Everything at the event is free thanks to our sponsors! Travel reimbursement is available - just complete the travel reimbursement application.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">Can I use past projects?</h5>
+					<p>True to the spirit of hackathons, you may not submit your past projects to HackGT.</p>
+				</div>
 			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Who is eligible to participate?</h5>
-				<p>Any student over the age of 18 enrolled in a college or university is allowed to participate. Teams can be up to four members - you can register with your team when you apply, any time after you’re accepted, or create a team at the event! If you are younger than 18, but a Georgia Tech student, you can still participate.</p>
-			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Who is eligible to mentor/volunteer?</h5>
-				<p>Anyone can mentor or volunteer. If you are interested in helping participants through their projects apply as a mentor. If you are interested in helping us run the event apply as a volunteer.</p>
-			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Do I need any experience to apply?</h5>
-				<p>No! Experience is not required. Hackathons are open environments for everyone. Check out our submissions from last year, including a multi-language transcompiler, a hackathon team finder, and a video frame finder.</p>
-			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Are there any costs?</h5>
-				<p>Food, swag, mentors, etc. everything is free thanks to our sponsors! Travel reimbursement is available - just complete the travel reimbursement application.</p>
-			</div>
-			<div class="faqs-item">
-				<h5 class="faqs-question">Can I use past projects?</h5>
-				<p>True to the spirit of hackathons, you may not submit your past projects to HackGT.</p>
+			<div id="faqs-cards-bottom" class="mobile">
+				<object tabindex="-1" id="jester-mobile" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
+				</object>
+				<object tabindex="-1" id="club-mobile" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
+				</object>
 			</div>
 		</div>
 		<div class="faqs-illo">
@@ -192,7 +208,8 @@
 		<div id="footer-illo">
 			<div id="footer-illo-blue"></div>
 			<div id="footer-illo-castle">
-				<object id="heart" type="image/svg+xml" data="assets/illos/footer/base.svg" />
+				<object id="heart" tabindex="-1" type="image/svg+xml" data="assets/illos/footer/base.svg">
+				</object>
 			</div>
 		</div>
 		<div id="footer-wrapper">
@@ -219,7 +236,7 @@
 			</div>
 			<hr class="footer-hr">
 			<div class="footer-end">
-				<h4 id="footer-note">made with <3 by HackGT</h4>
+				<h4 id="footer-note">made with &hearts; by HackGT</h4>
 				<div id="footer-logo-container">
 					<a href="https://hack.gt">
 						<img src="assets/hackgt_logos/hackgt_logo.png" class="footer-logo grow-anim">
