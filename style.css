@@ -89,7 +89,7 @@ hr {
   border: none;
   margin: 1em 0 2em;
   height: .1em;
-  background-color: var(--primary-color);
+  background-color: var(--primary-dark);
 }
 
 /* UTILITY */
@@ -239,7 +239,7 @@ hr {
 /* ABOUT SECTION */
 #forest-wrapper {
 	position: relative;
-	top: -20vh;
+	top: -25vh;
 	background: transparent;
 	z-index: 0;
 }
@@ -249,7 +249,8 @@ hr {
 	background-color: transparent;
 	position: absolute;
 	width: 100%;
-	height: 320vh;
+	height: 323vh;
+	background-position: -1vw 4vh;
 }
 
 #cat-illo {
