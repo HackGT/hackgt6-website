@@ -30,7 +30,7 @@ const main = () => {
                 && document.activeElement.classList.contains('nav-link'))) { // navbar
             document.getElementById("navbar").style.top = "0";
         } else {
-            document.getElementById("navbar").style.top = "-75px";
+            document.getElementById("navbar").style.top = "-6vh";
         }
         cachedScroll = window.pageYOffset;
     }

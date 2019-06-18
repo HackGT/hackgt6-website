@@ -1,8 +1,8 @@
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 
 Must do
-- bring in final assets (transition elements) from alicia
-- replace logo assets (header footer)
+- asset fixes
+- cross browser/screen testing
 - copy check/QA review
 
 ICED

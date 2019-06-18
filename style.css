@@ -9,48 +9,48 @@ body {
 	--grassy: #A9E293;
 	color: var(--primary-color);
 	font-family: 'Source Serif Pro', serif;
-	font-size: 24px;
-	line-height: 33px;
+	font-size: 1.5vw;
+	line-height: 1.25em;
 	max-width: 100%;
 	overflow-x: hidden;
 }
 
 button {
 	font-family: 'Source Serif Pro', serif;
-	font-size: 24px;
-	line-height: 33px;
+	font-size: 1.5vw;
+	line-height: 1.25em;
 	border: none;
 }
 
 h1 {
 	font-family: 'Milonga', Cursive;
-	font-size: 160px;
-	line-height: 200px;
+	font-size: 10vw;
+	line-height: 1.25em;
 	font-weight: normal;
 	margin: 0;
 }
 
 h2{
 	font-family: 'Milonga', serif;
-	font-size: 120px;
+	font-size: 7.5vw;
+	line-height: 1.25em;
 	font-weight: normal;
 	font-style: normal;
-	line-height: 150px;
 	margin: 0;
 }
 
 h3 {
 	font-family: 'Milonga', serif;
-	font-size: 64px;
-	line-height: 80px;
+	font-size: 4vw;
+	line-height: 1.25em;
 	font-weight: normal;
 	font-style: normal;
 	margin: 0;
 }
 
 h4 {
-	font-size: 32px;
-	line-height: 40px;
+	font-size: 2vw;
+	line-height: 1.25em;
 	font-weight: 400;
 	font-family: 'Milonga', serif;
 	font-style: normal;
@@ -58,8 +58,8 @@ h4 {
 }
 
 h5 { /* Basically just bold */
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 1.5vw;
+	line-height: 1.5em;
 	font-weight: 700;
 	font-style: normal;
 	margin: 0;
@@ -88,7 +88,7 @@ hr {
   display: block;
   border: none;
   margin: 1em 0 2em;
-  height: 1px;
+  height: .1em;
   background-color: var(--primary-color);
 }
 
@@ -118,31 +118,34 @@ hr {
 /* NAVIGATION */
 #navbar {
 	z-index: 1000;
-	height: 75px;
+	height: 6vh;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(255, 255, 255, .85);
-	box-shadow: 0px 5px .3em;
+	box-shadow: 0 .5em .3em;
   	position: fixed;
-  	margin-bottom: -75px;
+  	margin-bottom: -6vh;
 	top: 0;
 	-webkit-transition: top .7s;
 	transition: top .7s;
 	transition-timing-function: ease-in-out;
+	box-sizing: border-box;
+	padding: 0 4vw;
 }
 
 
 #nav-logo-container {
-	margin-left: 5vw;
-	margin-right: 75px;
 	transition: transform .3s;
+	height: 100%;
+	box-sizing: border-box;
+	padding: .5em 0;
 }
 
 .nav-logo {
-	height: 38px;
+	height: 100%;
 }
 
 .grow-anim {
@@ -164,8 +167,7 @@ hr {
 .nav-link {
 	color: var(--primary-color);
 	font-family: 'Roboto Mono', monospace;
-	font-size: 24px;
-	line-height: 28px;
+	line-height: 1.17em;
 	cursor: pointer;
 }
 
@@ -178,7 +180,7 @@ hr {
 	position: absolute;
 	width: 100%;
 	transform: scaleX(0);
-	height: 2px;
+	height: .1em;
 	bottom: 0;
 	left: 0;
 	background-color: var(--primary-color);
@@ -193,48 +195,18 @@ hr {
 
 #navbar a {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 24px;
-	line-height: 28px;
-	text-decoration: none;
-	margin-right: 50px;
 }
 
 #mlh-trust-badge {
 	display: block;
 	position: relative;
-	top: 25px;
-	width: 70px;
-	z-index: 10000;
+	top: 1.2vw;
+	width: 4.37vw;
+	z-index: 1000;
 }
 
 #mlh-trust-badge img {
 	width: 100%;
-}
-
-.nav-register {
-	margin-left: auto;
-}
-
-.nav-register-info {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 18px;
-	font-weight: 400;
-	font-style: normal;
-	color: #9b9b9b;
-	display: inline-block;
-	margin-right: 25px;
-}
-
-.nav-button {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 16px;
-	font-weight: 500;
-	font-style: normal;
-	padding: 10px 20px;
-	border: 1.5px solid #9b9b9b;
-	background-color: transparent;
-	margin-right: 5vw;
-	display: inline-block;
 }
 
 .illo-base {
@@ -256,19 +228,19 @@ hr {
 	align-self: center;
 	text-align: center;
 	width: 100%;
-	height: 1000px;
+	height: 100vh;
 	background-image: url(./assets/illos/hero/base.svg);
 	z-index: -2;
 }
 
 #hero-text {
-	margin-top: 100px;
+	margin-top: 10vh;
 }
 
 /* ABOUT SECTION */
 #forest-wrapper {
 	position: relative;
-	top: -8em;
+	top: -20vh;
 	background: transparent;
 	z-index: 0;
 }
@@ -282,7 +254,7 @@ hr {
 }
 
 #cat-illo {
-	width: 400px;
+	width: 20vw;
 	height: auto;
 	position: relative;
 	top: 220px;
@@ -296,14 +268,14 @@ hr {
 	flex-wrap: wrap;
 	text-align: center;
 	/* fixing jump to in-page anchor */
-	padding-top: 436px;
+	padding-top: 40vh;
 	background-color: var(--dark-blue);
 }
 
 #about-content {
 	max-width: 50vw;
 	text-align: left;
-	margin-left: 12.5%;
+	margin: auto 12.5vw;
 	z-index: 1;
 }
 
@@ -319,13 +291,13 @@ hr {
 } */
 
 #about-content > .section-title {
-	margin-bottom: 21px;
+	margin-bottom: 1.25em;
 }
 
 #about-text {
 	font-size: 1.33em;
 	line-height: 1.33em;
-	margin-bottom: 32px;
+	margin-bottom: 2vw;
 	max-width: 70%;
 }
 
@@ -333,12 +305,9 @@ hr {
 	font-weight: 600;
 	color:var(--primary-dark);
 	padding: .6em 1.5em;
-	/* border: 1.5px solid #9b9b9b; */
 	background-color: var(--inverted-color);
-	 /* transparent; */
-	font-size: 36px;
-	line-height: 48px;
-	letter-spacing: 1.8px;
+	font-size: 3vw;
+	line-height: 1.25em;
 	font-family: 'Source Serif Pro', serif;
 	transition: transform 0.3s, color 0.3s;
 	cursor: pointer;
@@ -355,7 +324,6 @@ hr {
 	flex-direction: row;
 	background-color: var(--dark-blue);
 	height: auto;
-	margin: 10px 0 -1px;
 }
 
 #schedule-content > .section-title {
@@ -380,13 +348,13 @@ hr {
 	background-size: contain;
 	background-image: url(./assets/illos/forest/shrooms.svg);
 	position: relative;
-	left: -20px;
+	left: -5vw;
 	z-index: 1;
 }
 
 #schedule-content {
 	width: 32.5vw;
-	margin-left: 90px;
+	margin-left: 5vw;
 	background-color: transparent;
 	z-index: 1;
 }
@@ -397,8 +365,6 @@ hr {
 
 .schedule-item {
 	display: flex; /* we shouldn't wrap, but just in case */
-	font-size: 24px;
-	line-height: 33px;
 }
 
 .schedule-times {
@@ -416,7 +382,7 @@ hr {
 #sponsors {
 	text-align: center;
 	/* fixing jump to in-page anchor */
-	padding-top: 100px;
+	padding-top: 8vh;
 	background-color: var(--dark-blue);
 }
 
@@ -429,11 +395,6 @@ hr {
 	justify-content: center;
 }
 
-#sponsors-title {
-	font-size: 100px;
-	line-height: 125px;
-}
-
 .sponsor-icon {
 	margin-left: 1vw;
 	margin-right: 1vw;
@@ -444,10 +405,10 @@ hr {
 }
 
 #sponsor-note {
-	margin: 4.5vw auto 90px;
+	margin: 6vh auto 5vh;
 	text-align: center;
 	font-weight: 600;
-	line-height: 44px;
+	line-height: 1.5em;
 	font-family: 'Source Serif Pro', serif;
 }
 
@@ -457,9 +418,8 @@ hr {
 #faqs {
 	display: flex;
 	flex-direction: row;
-	/* fixing jump to in-page anchor */
-	/* margin-bottom: 15vw; */
 	background-color: var(--faq-blue);
+	z-index: 3;
 }
 
 #faqs-content > .section-title {
@@ -469,10 +429,9 @@ hr {
 #faqs-content {
 	width: 37.5vw;
 	margin-left: 12.5vw;
-	font-size: 26px;
-	line-height: 36px;
-	padding-top: 350px;
-	margin-bottom: 120px;
+	line-height: 1.5em;
+	margin-top: 30vh;
+	margin-bottom: 7.5em;
 }
 
 .faqs-illo {
@@ -500,7 +459,7 @@ footer {
 #footer-illo-blue {
 	background-color: var(--faq-blue);
 	width: 100%;
-	height: 700px;
+	height: 30vh;
 	position: absolute;
 	z-index: 10;
 }
@@ -518,7 +477,7 @@ footer {
 
 #footer-wrapper {
 	width: 80%;
-	margin: 80px auto;
+	margin: 4vh auto;
 }
 
 #footer-content {
@@ -528,18 +487,18 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap-reverse;
 	align-self: center;
-	margin-bottom: 60px;
+	margin-bottom: 4vh;
 }
 
 #footer-questions-section {
 	flex: 1 1 auto;
-	width: 423px;
+	margin: 0 auto 2vh;
+	min-width: 300px;
+	max-width: 50%;
 }
 
 #footer-question {
-	font-size: 48px;
-	line-height: 60px;
-	margin-bottom: 15px;
+	line-height: 1.25em;
 }
 
 #footer-reach-out {
@@ -548,9 +507,8 @@ footer {
 }
 
 #footer-gt-student {
-	margin-top: 1vw;
 	flex: 1 1 40%;
-	margin-bottom: 20px;
+	margin-bottom: 2vh;
 }
 
 .footer-end {
@@ -562,20 +520,19 @@ footer {
 }
 
 #footer-note {
-	line-height: 44px;
-	margin-bottom: 30px;
+	line-height: 1.25em;
 }
 
 .footer-logo {
-	height: 44px;
+	height: 2.5em;
 	position: relative;
-	top: -10px;
+	top: -.5em;
 }
 
 .social-row > a > img {
-	width: 48px;
-	height: 48px;
-	margin-right: 27px;
+	margin-right: 2vw;
+	width: 8vw;
+	height: 8vw;
 	fill: var(--primary-color)
 }
 
@@ -591,9 +548,9 @@ footer {
 		line-height: 1.5em;
 	}
 
-	h5, p {
-		font-size: 24px;
-		line-height: 32px;
+	body, h5, p {
+		font-size: 2vw;
+		line-height: 1.25em;
 	}
 
 	/* NAVIGATION */
@@ -609,7 +566,6 @@ footer {
 	/* ABOUT SECTION */
 	#about-content {
 		max-width: 75vw;
-		margin-bottom: 29px;
 	}
 
 	.button {
@@ -628,10 +584,7 @@ footer {
 
 	#schedule-content {
 		margin: auto;
-		width: 80vw;
-		/* margin-left: auto; */
-		/* margin-right: 10vw; */
-		/* width: 40vw; */
+		max-width: 80vw;
 	}
 
 	/* SPONSOR SECTION */
@@ -640,7 +593,6 @@ footer {
 	}
 
 	#sponsors-title {
-		font-size: 3em;
 		line-height: 1em;
 	}
 
@@ -666,7 +618,7 @@ footer {
 		width: 80vw;
 		padding-top: 3em;
 		text-align: left;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 
 	#faqs-content > .section-title {
@@ -674,7 +626,7 @@ footer {
 	}
 
 	#faqs-cards-top {
-		max-height: 200px;
+		max-height: 30vw;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -682,29 +634,33 @@ footer {
 	}
 
 	#diamond-mobile {
-		height: 150px;
+		height: 25vw;
 		transform: rotate(37deg);
 		position: relative;
-		top: -50px;
+		top: 8vw;
+		left: 5vw;
 	}
 
 	#queen-mobile {
-		height: 250px;
+		height: 36vw;
 		transform: rotate(-30deg);
 	}
 
 	#jester-mobile {
-		height: 170px;
-		transform: rotate(47deg);
+		height: 28vw;
+		transform: rotate(-24deg);
+		position: relative;
+		left: 10vw;
+		top: 5vw;
 	}
 
 	#club-mobile {
-		height: 300px;
-		transform: rotate(-20deg);
+		height: 40vw;
+		transform: rotate(47deg);
 	}
 
 	#faqs-cards-bottom {
-		max-height: 200px;
+		max-height: 30vw;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -725,11 +681,11 @@ footer {
 	}
 
 	#footer-illo-blue {
-		height: 200px;
+		height: 20vh;
 	}
 
 	#footer-content {
-		margin-bottom: 8px;
+		margin-bottom: 1vh;
 		width: 100%;
 		text-align: center;
 	}
@@ -739,14 +695,12 @@ footer {
 	}
 
 	#footer-gt-student {
-		margin-top: -2.5vw;
 		width: 100%;
 		order: 1;
 	}
 
 	.footer-question {
 		margin-top: 15vw;
-		margin-bottom: -3vw;
 	}
 
 	.footer-end {
@@ -761,7 +715,6 @@ footer {
 
 	#footer-note {
 		margin: 1.5vw auto 2.5vw;
-		font-size: 1em;
 	}
 
 	#footer-logo-container {
@@ -782,28 +735,25 @@ footer {
 
 @media only screen and (max-width: 768px) {
 	body {
-		font-size: 16px;
-		line-height: 22px;
+		font-size: 3vw;
+		line-height: 1.375em;
 	}
 
 	h1 {
-		font-size: 48px;
-		line-height: 60px;
+		font-size: 10vw;
 	}
 
 	h2{
-		font-size: 32px;
-		line-height: 40px;
+		font-size: 7vw;
 	}
 
 	h3 {
-		font-size: 24px;
-		line-height: 30px;
+		font-size: 8vw;
 	}
 
-	h4, h5, p {
-		font-size: 16px;
-		line-height: 22px;
+	body, h4, h5, p {
+		font-size: 5vw;
+		line-height: 1.375em;
 		/* font-size: 1em; */
 	}
 
@@ -813,10 +763,14 @@ footer {
 
 	/* HERO SECTION */
 	#hero-text {
-		margin-top: 216px;
+		margin-top: 10vh;
 	}
 
 	/* ABOUT SECTION */
+	#forest-wrapper {
+		top: -8vh;
+	}
+
 	#forest-illo-base {
 		background-position: 10% 10%;
 	}
@@ -828,6 +782,7 @@ footer {
 	#about-content {
 		max-width: 80vw;
 		text-align: center;
+		margin: 0 auto 4vh;
 	}
 
 	#about-text {
@@ -929,8 +884,6 @@ footer {
 		justify-content: space-between;
 	}
 	.social-row > a > img {
-		width: 24px;
-		height: 24px;
 		margin-right: 0;
 		transition: transform 0.5s;
 	}
