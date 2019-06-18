@@ -1,43 +1,4 @@
-var diamondBearCard,
-    evilQueenCard,
-    jesterBearCard,
-    clubKingCard,
-    heart,
-    heartObject,
-    heartElement,
-    pathsObject,
-    path1,
-    path1Element,
-    path2,
-    path2Element,
-    path3,
-    path3Element,
-    heartContentDocument,
-    pathsContentDocument,
-    windowHeight,
-    scrollY,
-    scrollPosition,
-    elementHeight,
-    elementPosition;
-
 window.addEventListener("load", () => {
-    diamondBearCard = document.getElementById("diamondBearCard");
-    evilQueenCard = document.getElementById("evilQueenCard");
-    jesterBearCard = document.getElementById("jesterBearCard");
-    clubKingCard = document.getElementById("clubKingCard");
-
-    heartObject = document.getElementById("heart");
-    heartContentDocument = heartObject.contentDocument;
-    heart = heartContentDocument.getElementById("clip-rect-heart");
-    heartElement = heartContentDocument.getElementById("heart");
-
-    pathsObject = document.getElementById("paths")
-    pathsContentDocument = pathsObject.contentDocument;
-    path1 = pathsContentDocument.getElementById("clip-rect-path-1");
-    path1Element = pathsContentDocument.getElementById("path-1");
-    path2 = pathsContentDocument.getElementById("clip-rect-path-2");
-    path3 = pathsContentDocument.getElementById("clip-rect-path-3");
-
     document.addEventListener('scroll', animatePath1);
     document.addEventListener('scroll', animatePath2);
     document.addEventListener('scroll', animatePath3);
@@ -49,81 +10,98 @@ window.addEventListener("load", () => {
 })
 
 function animateDiamondBearCard() {
-    if (inView(diamondBearCard)) {
-        diamondBearCard.classList.add('animateDiamondBearCard');
-        diamondBearCard.classList.add('display');
-        document.removeEventListener('scroll', animateDiamondBearCard);
+    var element = document.getElementById("diamondBearCard");
+    if (inView(element)) {
+        element.classList.add('animateDiamondBearCard');
+        element.classList.add('display');
     }
 }
 
 function animateEvilQueenCard() {
-    if (inView(evilQueenCard)) {
-        evilQueenCard.classList.add('animateEvilQueenCard');
-        evilQueenCard.classList.add('display');
-        document.removeEventListener('scroll', animateEvilQueenCard);
+    var element = document.getElementById("evilQueenCard");
+    if (inView(element)) {
+        element.classList.add('animateEvilQueenCard');
+        element.classList.add('display');
     }
 }
 
 function animateJesterBearCard() {
-    if (inView(jesterBearCard)) {
-        jesterBearCard.classList.add('animateJesterBearCard');
-        jesterBearCard.classList.add('display');
-        document.removeEventListener('scroll', animateJesterBearCard);
+    var element = document.getElementById("jesterBearCard");
+    if (inView(element)) {
+        element.classList.add('animateJesterBearCard');
+        element.classList.add('display');
     }
 }
 
 function animateClubKingCard() {
-    if (inView(clubKingCard)) {
-        clubKingCard.classList.add('animateClubKingCard');
-        clubKingCard.classList.add('display');
-        document.removeEventListener('scroll', animateClubKingCard);
+    var element = document.getElementById("clubKingCard");
+    if (inView(element)) {
+        element.classList.add('animateClubKingCard');
+        element.classList.add('display');
     }
 }
 
 function animateHeart() {
-  if (inViewSVG(heart, heartObject)) {
-      heartElement.classList.add('display');
-      heart.classList.add('animateHeart');
-      document.removeEventListener('scroll', animateHeart);
+    var elementObject = document.getElementById("heart"),
+        element = elementObject.contentDocument.getElementById("clip-rect-heart"),
+        elementHeart = elementObject.contentDocument.getElementById("heart");
+
+  if (inViewSVG(element, elementObject)) {
+      elementHeart.classList.add('display');
+      element.classList.add('animateHeart');
   }
 }
 
 function animatePath1() {
-    if (inViewSVG(path1, pathsObject)) {
-        path1.classList.add('animatePath1');
-        path1Element.classList.add('display');
-        document.removeEventListener('scroll', animatePath1);
+    var elementObject = document.getElementById("paths"),
+        element = elementObject.contentDocument.getElementById("clip-rect-path-1"),
+        elementPath = elementObject.contentDocument.getElementById("path-1");
+        console.log(element)
+    if (inViewSVG(element, elementObject)) {
+        element.classList.add('animatePath1');
+        elementPath.classList.add('display');
     }
 }
 
 function animatePath2() {
-    if (inViewSVG(path2, pathsObject)) {
-        path2.classList.add('animatePath2');
-        document.removeEventListener('scroll', animatePath2);
+    var elementObject = document.getElementById("paths"),
+        element = elementObject.contentDocument.getElementById("clip-rect-path-2"),
+        elementPath = elementObject.contentDocument.getElementById("path-2");
+        console.log(element)
+    if (inViewSVG(element, elementObject)) {
+        element.classList.add('animatePath2');
+        elementPath.classList.add('display');
     }
 }
 
 function animatePath3() {
-    if (inViewSVG(path3, pathsObject)) {
-        path3.classList.add('animatePath3');
-        document.removeEventListener('scroll', animatePath3);
+    var elementObject = document.getElementById("paths"),
+        element = elementObject.contentDocument.getElementById("clip-rect-path-3"),
+        elementPath = elementObject.contentDocument.getElementById("path-3");
+        console.log(element)
+    if (inViewSVG(element, elementObject)) {
+        element.classList.add('animatePath3');
+        elementPath.classList.add('display');
     }
 }
 
 function inViewSVG(element, elementObject) {
-    windowHeight = window.innerHeight,
-    scrollY = window.scrollY,
-    scrollPosition = scrollY + windowHeight,
-    elementHeight = 0.4 * elementObject.clientHeight,
-    elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
+    console.log(elementObject.clientHeight)
+    var windowHeight = window.innerHeight,
+        scrollY = window.scrollY,
+        scrollPosition = scrollY + windowHeight,
+        elementHeight = 0.4 * elementObject.clientHeight,
+        elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
+    console.log("scroll Position " + scrollPosition)
+    console.log("element Position " + elementPosition)
     return scrollPosition > elementPosition;
 }
 
 function inView(element) {
-    windowHeight = window.innerHeight,
-    scrollY = window.scrollY,
-    scrollPosition = scrollY + windowHeight,
-    elementHeight = 0.4 * element.clientHeight,
-    elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+    var windowHeight = window.innerHeight,
+        scrollY = window.scrollY,
+        scrollPosition = scrollY + windowHeight,
+        elementHeight = 0.4 * element.clientHeight,
+        elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
     return scrollPosition > elementPosition;
 }
