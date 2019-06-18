@@ -111,6 +111,9 @@ hr {
 	margin: auto;
 }
 
+.mobile {
+	display: none;
+}
 /* NAVIGATION */
 #navbar {
 	z-index: 1000;
@@ -502,7 +505,7 @@ footer {
 }
 
 #footer-wrapper {
-	width: 75%;
+	width: 80%;
 	margin: 80px auto;
 }
 
@@ -642,15 +645,58 @@ footer {
 	}
 
 	/* FAQS SECTION */
+	#faqs-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
 	#faqs-content {
 		width: 80vw;
-		margin-left: 10vw;
-		padding-top: 450px;
+		padding-top: 3em;
 		text-align: left;
+		margin-bottom: 0px;
 	}
 
 	#faqs-content > .section-title {
 		text-align: center;
+	}
+
+	#faqs-cards-top {
+		max-height: 200px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		z-index: 20;
+	}
+
+	#diamond-mobile {
+		height: 150px;
+		transform: rotate(37deg);
+		position: relative;
+		top: -50px;
+	}
+
+	#queen-mobile {
+		height: 250px;
+		transform: rotate(-30deg);
+	}
+
+	#jester-mobile {
+		height: 170px;
+		transform: rotate(47deg);
+	}
+
+	#club-mobile {
+		height: 300px;
+		transform: rotate(-20deg);
+	}
+
+	#faqs-cards-bottom {
+		max-height: 200px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		z-index: 20;
 	}
 
 	.faqs-illo {
@@ -866,10 +912,14 @@ footer {
 		margin-top: -6vw;
 	}
 
+	.social-row {
+		display: flex;
+		justify-content: space-between;
+	}
 	.social-row > a > img {
 		width: 24px;
 		height: 24px;
-		margin-right: 17px;
+		margin-right: 0;
 		transition: transform 0.5s;
 	}
 }
