@@ -125,7 +125,6 @@ hr {
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(255, 255, 255, .85);
-	box-shadow: 0 .5em .3em;
   	position: fixed;
   	margin-bottom: -6vh;
 	top: 0;
@@ -133,7 +132,7 @@ hr {
 	transition: top .7s;
 	transition-timing-function: ease-in-out;
 	box-sizing: border-box;
-	padding: 0 4vw;
+	padding: 1vh 12.5vw;
 }
 
 
@@ -141,7 +140,6 @@ hr {
 	transition: transform .3s;
 	height: 100%;
 	box-sizing: border-box;
-	padding: .5em 0;
 }
 
 .nav-logo {
@@ -161,7 +159,8 @@ hr {
 	flex-direction: row;
 	justify-content: space-around;
 	flex: 1 1 auto;
-	max-width: 55vw; /* TODO: Adjust this per final layout */
+	max-width: 40vw; /* TODO: Adjust this per final layout */
+	font-size: 1.25vw;
 }
 
 .nav-link {
@@ -200,8 +199,8 @@ hr {
 #mlh-trust-badge {
 	display: block;
 	position: relative;
-	top: 1.2vw;
-	width: 4.37vw;
+	width: 4.5vw;
+	top: 2vw;
 	z-index: 1000;
 }
 
@@ -278,8 +277,8 @@ hr {
 	margin: auto 12.5vw;
 	z-index: 1;
 }
-
-/* #about-content::after {
+/*
+#about-content::after {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -288,7 +287,8 @@ hr {
 	position: absolute;
 	top: 0;
 	left: 0;
-} */
+}
+*/
 
 #about-content > .section-title {
 	margin-bottom: 1.25em;
@@ -412,14 +412,18 @@ hr {
 	font-family: 'Source Serif Pro', serif;
 }
 
-
-
 /* FAQS SECTION */
 #faqs {
 	display: flex;
 	flex-direction: row;
 	background-color: var(--faq-blue);
 	z-index: 3;
+	padding-top: 10vh;
+}
+
+#faqs-wrapper {
+	margin-top: 30vh;
+	margin-bottom: 7.5em;
 }
 
 #faqs-content > .section-title {
@@ -430,8 +434,6 @@ hr {
 	width: 37.5vw;
 	margin-left: 12.5vw;
 	line-height: 1.5em;
-	margin-top: 30vh;
-	margin-bottom: 7.5em;
 }
 
 .faqs-illo {
@@ -459,7 +461,7 @@ footer {
 #footer-illo-blue {
 	background-color: var(--faq-blue);
 	width: 100%;
-	height: 30vh;
+	height: 40vh;
 	position: absolute;
 	z-index: 10;
 }
@@ -526,13 +528,12 @@ footer {
 .footer-logo {
 	height: 2.5em;
 	position: relative;
-	top: -.5em;
 }
 
 .social-row > a > img {
 	margin-right: 2vw;
-	width: 8vw;
-	height: 8vw;
+	width: 4vw;
+	height: 4vw;
 	fill: var(--primary-color)
 }
 
@@ -773,6 +774,7 @@ footer {
 
 	#forest-illo-base {
 		background-position: 10% 10%;
+		height: 200vh;
 	}
 
 	#about {
@@ -884,6 +886,8 @@ footer {
 		justify-content: space-between;
 	}
 	.social-row > a > img {
+		width: 8vw;
+		height: 8vw;
 		margin-right: 0;
 		transition: transform 0.5s;
 	}

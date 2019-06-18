@@ -5,6 +5,9 @@ Must do
 - cross browser/screen testing
 - copy check/QA review
 
+Bugs
+- Kinda funky navbar hover
+
 ICED
 - parallax for cards
 - fallback alt text
