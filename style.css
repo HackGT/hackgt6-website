@@ -459,7 +459,7 @@ hr {
 	margin-left: 12.5vw;
 	font-size: 26px;
 	line-height: 36px;
-	/* padding-top: 450px; */ /* removing since it looks oddly excessive */
+	padding-top: 350px;
 	margin-bottom: 120px;
 }
 
