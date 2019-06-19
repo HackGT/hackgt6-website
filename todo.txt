@@ -1,6 +1,7 @@
 <!-- TODO responsiveness QA tests and accessibility (tabbing) -->
 
 Must do
+- investigate max width
 - asset fixes
 - cross browser/screen testing
 - copy check/QA review

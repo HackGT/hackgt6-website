@@ -102,7 +102,7 @@ hr {
 }
 
 section {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .section-title {
@@ -134,6 +134,7 @@ section {
 	top: 0;
 	-webkit-transition: top .7s;
 	transition: top .7s;
+	-webkit-transition-timing-function: ease-in-out;
 	transition-timing-function: ease-in-out;
 	box-sizing: border-box;
 	padding: 1vh 12.5vw;
@@ -141,7 +142,6 @@ section {
 
 
 #nav-logo-container {
-	transition: transform .3s;
 	height: 100%;
 	box-sizing: border-box;
 }
@@ -151,6 +151,7 @@ section {
 }
 
 .grow-anim {
+	-webkit-transition: transform .3s;
 	transition: transform .3s;
 }
 
@@ -219,25 +220,21 @@ section {
 }
 
 /* HERO SECTION */
+
 #hero {
 	background-color: var(--sky-blue);
 	text-align: center;
 }
 
-.hero-illo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-self: center;
-	text-align: center;
-	width: 100%;
-	height: 100vh;
-	background-image: url(./assets/illos/hero/base.svg);
-	z-index: -2;
+#hero-content {
+	margin-top: 10vh;
+	margin-bottom: -20vh;
+	position: relative;
+	z-index: 1;
 }
 
-#hero-text {
-	margin-top: 10vh;
+#hero-dates {
+	font-size: 3vw;
 }
 
 /* ABOUT SECTION */
@@ -565,9 +562,8 @@ footer {
 		display: none;
 	}
 
-	/* HERO SECTION */
-	.hero-illo {
-		margin-top: 6.25vh;
+	#hero-content {
+		margin-bottom: -10vh;
 	}
 
 	/* ABOUT SECTION */
@@ -769,8 +765,9 @@ footer {
 	}
 
 	/* HERO SECTION */
-	#hero-text {
-		margin-top: 10vh;
+	#hero-content {
+		margin-top: 2vh;
+		margin-bottom: -5vh;
 	}
 
 	/* ABOUT SECTION */
@@ -901,28 +898,4 @@ footer {
 		margin-right: 0;
 		transition: transform 0.5s;
 	}
-}
-
-
-/* Parallax effects */
-.parallax {
-	perspective: 1px;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-.parallax__layer {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.parallax__layer--base {
-	transform: translateZ(0);
-}
-.parallax__layer--back {
-	transform: translateZ(-1px);
 }

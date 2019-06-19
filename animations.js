@@ -1,11 +1,12 @@
-var diamondBearCard,
+var heroContent,
+    diamondBearCard,
     evilQueenCard,
     jesterBearCard,
     clubKingCard,
     heart,
     heartObject,
     heartElement,
-    pathsObject,
+    heroObject,
     path1,
     path1Element,
     path2,
@@ -21,6 +22,7 @@ var diamondBearCard,
     elementPosition;
 
 window.addEventListener("load", () => {
+    heroContent = document.getElementById("hero-content");
     diamondBearCard = document.getElementById("diamondBearCard");
     evilQueenCard = document.getElementById("evilQueenCard");
     jesterBearCard = document.getElementById("jesterBearCard");
@@ -31,8 +33,9 @@ window.addEventListener("load", () => {
     heart = heartContentDocument.getElementById("clip-rect-heart");
     heartElement = heartContentDocument.getElementById("heart");
 
-    pathsObject = document.getElementById("paths")
-    pathsContentDocument = pathsObject.contentDocument;
+    heroObject = document.getElementById("hero-illo");
+
+    pathsContentDocument = heroObject.contentDocument;
     path1 = pathsContentDocument.getElementById("clip-rect-path-1");
     path1Element = pathsContentDocument.getElementById("path-1");
     path2 = pathsContentDocument.getElementById("clip-rect-path-2");
@@ -47,6 +50,7 @@ window.addEventListener("load", () => {
     document.addEventListener('scroll', animateJesterBearCard);
     document.addEventListener('scroll', animateClubKingCard);
 })
+
 
 function animateDiamondBearCard() {
     if (inView(diamondBearCard)) {
@@ -89,7 +93,7 @@ function animateHeart() {
 }
 
 function animatePath1() {
-    if (inViewSVG(path1, pathsObject)) {
+    if (inViewSVG(path1, heroObject)) {
         path1.classList.add('animatePath1');
         path1Element.classList.add('display');
         document.removeEventListener('scroll', animatePath1);
@@ -97,14 +101,14 @@ function animatePath1() {
 }
 
 function animatePath2() {
-    if (inViewSVG(path2, pathsObject)) {
+    if (inViewSVG(path2, heroObject)) {
         path2.classList.add('animatePath2');
         document.removeEventListener('scroll', animatePath2);
     }
 }
 
 function animatePath3() {
-    if (inViewSVG(path3, pathsObject)) {
+    if (inViewSVG(path3, heroObject)) {
         path3.classList.add('animatePath3');
         document.removeEventListener('scroll', animatePath3);
     }
