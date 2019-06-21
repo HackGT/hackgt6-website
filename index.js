@@ -5,8 +5,13 @@ const main = () => {
         l.addEventListener('click', e => {
             e.preventDefault();
             // Set Offset Distance from top to account for fixed nav
-            const offset = 10;
+            let offset = 10;
+            console.log(e.target);
             const targetID = e.target.dataset.scroll;
+            if (targetID === 'schedule') {
+                offset = 160;
+            }
+            console.log(targetID);
             const section = document.getElementById(targetID);
             if (!section) {
                 console.error("No graceful failure here");
@@ -22,19 +27,21 @@ const main = () => {
     // Hide on scroll - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
     let cachedScroll = window.pageYOffset;
     // TODO enable only if nav is even visible
-    // if (getComputedStyle(document.getElementById("navbar")).display === 'none')
     // TODO set nav background to section color
-    window.onscroll = () => {
+    window.addEventListener('scroll', () => {
         if (cachedScroll > window.pageYOffset
             || (document.activeElement
                 && document.activeElement.classList.contains('nav-link'))) { // navbar
-            document.getElementById("navbar").style.top = "0";
+                    document.getElementById("navbar").style.top = "0";
         } else {
             document.getElementById("navbar").style.top = "-6vh";
         }
         cachedScroll = window.pageYOffset;
-    }
+    })
 
+    document.addEventListener('mousemove', () => {
+        // TODO roll down splash
+    });
 }
 
 window.addEventListener('load', main);

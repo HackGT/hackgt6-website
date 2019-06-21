@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     heart = heartContentDocument.getElementById("clip-rect-heart");
     heartElement = heartContentDocument.getElementById("heart");
 
-    heroObject = document.getElementById("hero-illo");
+    heroObject = document.getElementById("forest-illo-base");
 
     pathsContentDocument = heroObject.contentDocument;
     path1 = pathsContentDocument.getElementById("clip-rect-path-1");
