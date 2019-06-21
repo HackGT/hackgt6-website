@@ -67,7 +67,7 @@
             <rect id="clip-rect-path-3" x="600" y="1300" width="5000" height="0"></rect>
         </clipPath>
     </defs>
-        <g>
+    <g>
         <image id="sun" width="700" x="1500" y="80" href="sun.svg"/>
     </g>
     <g id="clouds">

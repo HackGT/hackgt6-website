@@ -36,30 +36,45 @@
         opacity: 0.97;
       }
         .cat {
-            animation: rotation 5s infinite alternate;
-            transform-origin: 80% 35%;
+            animation: rotation 7s infinite ease-in-out alternate both;
+            transform-origin: 85% 35%;
         }
-        @-webkit-keyframes rotation {
+        @keyframes rotation {
             from {
-                -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
             }
-
+            
             to {
-                -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
             }
         }
     </style>
     <filter id="glowingPulse2">
       <!--Blur effect-->
-      <feGaussianBlur stdDeviation="10" result="spec2">
+      <feGaussianBlur stdDeviation="100" result="spec2">
         <animate attributeName="stdDeviation"
-                 from="0" to="40"
-                 dur="5s"
+                 dur="3s"
+                 values="0; 10; 10; 0;"
                  repeatCount="indefinite"
-                 values="0; 40; 40; 0;"
                  keyTimes="0; 0.75; 0.75; 1"/>
       </feGaussianBlur>
-      <feComposite in="SourceGraphic" in2="spec2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+      <feComposite in="SourceGraphic" in2="spec2" operator="arithmetic" k1="0" k2="1" k3="0.5" k4="0" />
+    </filter>
+    <filter id="eyes">
+        <feFlood result="flood" flood-color="#F3B769" flood-opacity="1"></feFlood>
+        <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+        <feMorphology in="mask" result="dilated" operator="dilate" radius="2"></feMorphology>
+        <feGaussianBlur in="dilated" result="blurred" stdDeviation="5">
+            <animate attributeName="stdDeviation"
+                 from="0" to="7"
+                 dur="3s"
+                 repeatCount="indefinite"
+                 keyTimes="0; 0.5; 0.75; 1"/>
+        </feGaussianBlur>
+        <feMerge>
+            <feMergeNode in="blurred"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
     </filter>
   </defs>
   <title>CheshireCatAsset 3</title>
