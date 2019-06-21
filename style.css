@@ -249,7 +249,7 @@ section {
 	background-position: -15vw 0;
 	position: absolute;
 	width: 130vw;
-	height: 300vh;
+	height: 360vh;
 }
 
 #cat-illo {
@@ -814,7 +814,6 @@ footer {
 
 	#mushrooms-illo {
 		position: relative;
-		left: 2%;
 		width: 100%;
 		height: 400px; /* TODO why is this gone */
 	}
