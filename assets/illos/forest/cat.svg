@@ -36,6 +36,7 @@
         opacity: 0.97;
       }
         .cat {
+            -webkit-animation: rotation 7s infinite ease-in-out alternate both;
             animation: rotation 7s infinite ease-in-out alternate both;
             transform-origin: 85% 35%;
         }
@@ -46,6 +47,15 @@
 
             to {
                 transform: rotate(-5deg);
+            }
+        }
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(5deg);
+            }
+
+            to {
+                -webkit-transform: rotate(-5deg);
             }
         }
     </style>

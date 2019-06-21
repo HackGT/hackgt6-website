@@ -56,6 +56,7 @@
         fill: #7fff7f;
       }
         .shroom {
+            -webkit-animation: rotation 5s infinite alternate;
             animation: rotation 5s infinite alternate;
             transform-origin: 50% 40%;
         }
@@ -70,10 +71,10 @@
         }
         @keyframes rotation {
           from {
-            transform: rotate(1deg);
+            transform: rotate(2deg);
           }
           to {
-            transform: rotate(-1deg);
+            transform: rotate(-2deg);
           }
         }
     </style>
