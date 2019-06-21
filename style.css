@@ -224,7 +224,7 @@ section {
 #hero {
 	background-color: var(--sky-blue);
 	text-align: center;
-	height: 100vh;
+	height: 150vh; /* silly sun */
 }
 
 #hero-content {
@@ -238,8 +238,15 @@ section {
 }
 
 /* ABOUT SECTION */
+#part-one-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
 #forest-wrapper {
 	background: transparent;
+	width: 100%;
 	z-index: 0;
 }
 
@@ -250,15 +257,6 @@ section {
 	position: absolute;
 	width: 130vw;
 	height: 360vh;
-}
-
-#cat-illo {
-	width: 20vw;
-	height: auto;
-	position: relative;
-	top: 220px;
-	right: 0vw; /* TODO: cat tail is getting cut off... */
-	z-index: 1;
 }
 
 #about {
@@ -299,6 +297,22 @@ section {
 	line-height: 1.33em;
 	margin-bottom: 2vw;
 	max-width: 70%;
+}
+
+
+#cat-illo {
+	height: 24vw;
+	position: relative;
+	left: 3vw;
+	z-index: 1;
+	pointer-events: none;
+	display: block;
+	margin: 0;
+}
+
+#about .button {
+	position: relative;
+	top: -12vh;
 }
 
 .button {
@@ -420,6 +434,7 @@ section {
 	background-color: var(--faq-blue);
 	z-index: 3;
 	padding-top: 10vh;
+	overflow: visible;
 }
 
 #faqs-wrapper {
@@ -470,7 +485,7 @@ footer {
 #footer-illo-castle {
 	position: relative;
 	z-index: 100;
-	width: 80%;
+	width: 60%;
 	margin: auto;
 }
 
@@ -561,11 +576,15 @@ footer {
 	}
 
 	#hero {
-		height: 40vh;
+		height: 80vh;
 	}
 
 	#hero-content {
 		margin-bottom: -10vh;
+	}
+
+	#forest-illo-base {
+		background-position: -20vw -5vh;
 	}
 
 	/* ABOUT SECTION */
@@ -580,6 +599,10 @@ footer {
 
 	#cat-illo {
 		display: none;
+	}
+
+	#about .button {
+		top: 0vh;
 	}
 
 	/* SCHEDULE SECTION */
@@ -614,10 +637,14 @@ footer {
 	}
 
 	/* FAQS SECTION */
+	#faqs {
+		padding-top: 0;
+	}
 
 	#faqs-wrapper {
 		display: flex;
 		flex-direction: column;
+		margin-top: 0;
 	}
 
 	#faqs-content {
@@ -779,7 +806,6 @@ footer {
 
 	#forest-illo-base {
 		height: 160vh;
-		background-position: -20vw -5vh;
 	}
 
 	#about {
@@ -814,6 +840,7 @@ footer {
 
 	#mushrooms-illo {
 		position: relative;
+		left: 2vw;
 		width: 100%;
 		height: 400px; /* TODO why is this gone */
 	}
@@ -835,7 +862,8 @@ footer {
 
 	/* SPONSOR SECTION */
 	#sponsors {
-		padding-top: 50px;
+		padding-top: 5vh;
+		padding-bottom: 5vh;
 	}
 
 	.sponsors-container {
