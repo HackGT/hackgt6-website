@@ -53,42 +53,45 @@ window.addEventListener("load", () => {
 
 
 function animateDiamondBearCard() {
-    if (inView(diamondBearCard)) {
-        diamondBearCard.classList.add('animateDiamondBearCard');
-        diamondBearCard.classList.add('display');
-        document.removeEventListener('scroll', animateDiamondBearCard);
+    var element = document.getElementById("diamondBearCard");
+    if (inView(element)) {
+        element.classList.add('animateDiamondBearCard');
+        element.classList.add('display');
     }
 }
 
 function animateEvilQueenCard() {
-    if (inView(evilQueenCard)) {
-        evilQueenCard.classList.add('animateEvilQueenCard');
-        evilQueenCard.classList.add('display');
-        document.removeEventListener('scroll', animateEvilQueenCard);
+    var element = document.getElementById("evilQueenCard");
+    if (inView(element)) {
+        element.classList.add('animateEvilQueenCard');
+        element.classList.add('display');
     }
 }
 
 function animateJesterBearCard() {
-    if (inView(jesterBearCard)) {
-        jesterBearCard.classList.add('animateJesterBearCard');
-        jesterBearCard.classList.add('display');
-        document.removeEventListener('scroll', animateJesterBearCard);
+    var element = document.getElementById("jesterBearCard");
+    if (inView(element)) {
+        element.classList.add('animateJesterBearCard');
+        element.classList.add('display');
     }
 }
 
 function animateClubKingCard() {
-    if (inView(clubKingCard)) {
-        clubKingCard.classList.add('animateClubKingCard');
-        clubKingCard.classList.add('display');
-        document.removeEventListener('scroll', animateClubKingCard);
+    var element = document.getElementById("clubKingCard");
+    if (inView(element)) {
+        element.classList.add('animateClubKingCard');
+        element.classList.add('display');
     }
 }
 
 function animateHeart() {
-  if (inViewSVG(heart, heartObject)) {
-      heartElement.classList.add('display');
-      heart.classList.add('animateHeart');
-      document.removeEventListener('scroll', animateHeart);
+    var elementObject = document.getElementById("heart"),
+        element = elementObject.contentDocument.getElementById("clip-rect-heart"),
+        elementHeart = elementObject.contentDocument.getElementById("heart");
+
+  if (inViewSVG(element, elementObject)) {
+      elementHeart.classList.add('display');
+      element.classList.add('animateHeart');
   }
 }
 
@@ -115,19 +118,22 @@ function animatePath3() {
 }
 
 function inViewSVG(element, elementObject) {
-    windowHeight = window.innerHeight,
-    scrollY = window.scrollY,
-    scrollPosition = scrollY + windowHeight,
-    elementHeight = 0.4 * elementObject.clientHeight,
-    elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
+    console.log(elementObject.clientHeight)
+    var windowHeight = window.innerHeight,
+        scrollY = window.scrollY,
+        scrollPosition = scrollY + windowHeight,
+        elementHeight = 0.4 * elementObject.clientHeight,
+        elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
+    console.log("scroll Position " + scrollPosition)
+    console.log("element Position " + elementPosition)
     return scrollPosition > elementPosition;
 }
 
 function inView(element) {
-    windowHeight = window.innerHeight,
-    scrollY = window.scrollY,
-    scrollPosition = scrollY + windowHeight,
-    elementHeight = 0.4 * element.clientHeight,
-    elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+    var windowHeight = window.innerHeight,
+        scrollY = window.scrollY,
+        scrollPosition = scrollY + windowHeight,
+        elementHeight = 0.4 * element.clientHeight,
+        elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
     return scrollPosition > elementPosition;
 }
