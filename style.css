@@ -301,9 +301,9 @@ section {
 
 
 #cat-illo {
-	height: 24vw;
+	height: 18rem;
 	position: relative;
-	left: 3vw;
+	left: calc(6vw + 3rem);
 	z-index: 1;
 	pointer-events: none;
 	display: block;
@@ -312,7 +312,7 @@ section {
 
 #about .button {
 	position: relative;
-	top: -12vh;
+	top: -9rem;
 }
 
 .button {
