@@ -13,6 +13,7 @@ body {
 	line-height: 1.25em;
 	max-width: 100%;
 	overflow-x: hidden;
+	background-color: var(--faq-blue);
 }
 
 button {
@@ -222,9 +223,11 @@ section {
 /* HERO SECTION */
 
 #hero {
-	background-color: var(--sky-blue);
+	position: absolute;
+	z-index: 1000;
+	top: 0px;
+	background-color: transparent;
 	text-align: center;
-	height: 150vh; /* silly sun */
 }
 
 #hero-content {
@@ -235,6 +238,10 @@ section {
 
 #hero-dates {
 	font-size: 3vw;
+}
+
+#hero-illo {
+	width: 100%;
 }
 
 /* ABOUT SECTION */
@@ -250,23 +257,28 @@ section {
 	z-index: 0;
 }
 
+#hero-animations {
+	position: relative;
+	top: 0px;
+}
+
 #forest-illo-base {
-	background-image: url(./assets/illos/hero/merged.svg);
-	background-color: transparent;
-	background-position: -15vw 0;
-	position: absolute;
-	width: 130vw;
-	height: 360vh;
+	position: relative;
+	background-color: var(--sky-blue);
+	z-index: 999;
 }
 
 #about {
+	position: absolute;
+	z-index: 1000;
+	top: 25%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-align: center;
 	/* fixing jump to in-page anchor */
 	padding-top: 40vh;
-	background-color: var(--dark-blue);
+	background-color: transparent;
 }
 
 #about-content {
@@ -334,6 +346,9 @@ section {
 
 /* SCHEDULE SECTION */
 #schedule {
+	position: relative;
+	z-index: 1000;
+	top: -20vh;
 	display: flex;
 	flex-direction: row;
 	background-color: var(--dark-blue);
@@ -394,6 +409,8 @@ section {
 
 /* SPONSOR SECTION */
 #sponsors {
+	position: relative;
+	top: -20vh;
 	text-align: center;
 	/* fixing jump to in-page anchor */
 	padding-top: 8vh;
@@ -805,11 +822,10 @@ footer {
 	}
 
 	#forest-illo-base {
-		height: 160vh;
 	}
 
 	#about {
-		padding-top: 140px;
+		top: 8%;
 	}
 
 	#about-content {
