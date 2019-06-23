@@ -79,14 +79,11 @@ function animateHeart() {
 }
 
 function inViewSVG(element, elementObject) {
-    console.log(elementObject.clientHeight)
     var windowHeight = window.innerHeight,
         scrollY = window.scrollY,
         scrollPosition = scrollY + windowHeight,
         elementHeight = 0.4 * elementObject.clientHeight,
         elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
-    console.log("scroll Position " + scrollPosition)
-    console.log("element Position " + elementPosition)
     return scrollPosition > elementPosition;
 }
 
