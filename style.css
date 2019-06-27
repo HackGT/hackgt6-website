@@ -724,6 +724,7 @@ footer {
 
 	#footer-questions-section {
 		width: 100%;
+		max-width: 100%;
 	}
 
 	#footer-gt-student {
