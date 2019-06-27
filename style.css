@@ -328,6 +328,9 @@ section {
 }
 
 .button {
+    box-sizing: border-box;
+    width: 10em;
+    max-width: 100%;
     font-weight: 600;
     color: var(--primary-dark);
     padding: .6em 1.5em;
@@ -531,7 +534,7 @@ footer {
 #footer-questions-section {
     flex: 1 1 auto;
     margin: 0 auto 2vh;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 50%;
 }
 
@@ -645,7 +648,7 @@ footer {
 
     .button {
         font-size: 2.1vw;
-        padding: 1em 4em;
+        padding: 1em 0;
     }
 
     #cat-illo {
@@ -871,7 +874,7 @@ footer {
         font-size: 8vw;
     }
 
-    body, h4, h5, p {
+    body, h4, h5, p, span {
         font-size: 5vw;
         line-height: 1.375em;
         /* font-size: 1em; */
@@ -924,7 +927,7 @@ footer {
         ;
         margin: auto;
         /* border: 1px solid #9b9b9b; */
-        padding: .6em 4em;
+        padding: .6em 0;
     }
 
     /* SCHEDULE SECTION */
@@ -1015,6 +1018,7 @@ footer {
 
     .social-row {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
