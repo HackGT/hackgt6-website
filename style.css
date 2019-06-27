@@ -124,7 +124,7 @@ section {
 
 /* NAVIGATION */
 #navbar {
-    z-index: 1000;
+    z-index: 10000;
     height: 6vh;
     width: 100%;
     display: flex;
@@ -209,7 +209,7 @@ section {
     position: relative;
     width: 4.5vw;
     top: 2vw;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 #mlh-trust-badge img {
@@ -315,7 +315,7 @@ section {
 #cat-illo {
     height: 18rem;
     position: relative;
-    left: calc(6vw + 3rem);
+    left: calc(10em);
     z-index: 1;
     pointer-events: none;
     display: block;
