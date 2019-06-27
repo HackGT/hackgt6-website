@@ -315,7 +315,7 @@ section {
 #cat-illo {
     height: 18rem;
     position: relative;
-    left: calc(6vw + 3rem);
+    left: calc(10em);
     z-index: 1;
     pointer-events: none;
     display: block;
