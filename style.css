@@ -11,6 +11,7 @@ body {
     font-family: 'Source Serif Pro', serif;
     font-size: 1.5vw;
     line-height: 1.25em;
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     background-color: var(--faq-blue);
@@ -224,9 +225,8 @@ section {
 
 /* HERO SECTION */
 #hero {
-    position: absolute;
-    z-index: 1000;
-    top: 0px;
+    z-index: 10;
+    height: 120vh;
     background-color: transparent;
     text-align: center;
 }
@@ -235,10 +235,6 @@ section {
     margin-top: 10vh;
     position: relative;
     z-index: 1;
-}
-
-#hero-dates {
-    font-size: 3vw;
 }
 
 #hero-illo {
@@ -264,68 +260,52 @@ section {
 }
 
 #forest-illo-base {
-    position: relative;
-    background-color: var(--sky-blue);
-    z-index: 999;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 #about {
-    position: absolute;
-    z-index: 1000;
-    top: 25%;
+    z-index: 10;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    /* fixing jump to in-page anchor */
-    padding-top: 40vh;
-    background-color: transparent;
+    overflow: visible;
+    background-color: var(--dark-blue);
 }
 
 #about-content {
-    max-width: 50vw;
+    max-width: 80%;
     text-align: left;
-    margin: auto 12.5vw;
     z-index: 1;
+    position: relative;
+    margin: 3em;
 }
 
-/*
-#about-content::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-*/
-#about-content>.section-title {
-    margin-bottom: 1.25em;
+#about-background {
+    min-width: 320px;
+    max-width: 50%;
+    padding: 4em;
+    position: relative;
+    right: 4em;
+    border: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, .85);
+    box-shadow: 0 0 4em 4em rgba(255, 255, 255, .85);
+    border-radius: 50%;
+    margin: 4em 0;
 }
 
-#about-text {
+#about-content > .section-title {
+    margin-bottom: .25em;
+}
+
+/* #about-text {
     font-size: 1.33em;
     line-height: 1.33em;
-    margin-bottom: 2vw;
-    max-width: 70%;
-}
-
-#cat-illo {
-    height: 18rem;
-    position: relative;
-    left: calc(10em);
-    z-index: 1;
-    pointer-events: none;
-    display: block;
-    margin: 0;
-}
-
-#about .button {
-    position: relative;
-    top: -9rem;
-}
+} */
 
 .button {
     box-sizing: border-box;
@@ -349,18 +329,13 @@ section {
 
 /* SCHEDULE SECTION */
 #schedule {
-    position: absolute;
-    z-index: 1000;
-    top: 60%;
+    z-index: 10;
     display: flex;
     flex-direction: row;
-    /* background-color: var(--dark-blue); */
-    background-color: transparent;
-    height: auto;
+    background-color: var(--dark-blue);
 }
 
-#schedule-content>.section-title {
-    position: relative;
+#schedule-content > .section-title {
     left: -20%;
     margin-bottom: 1vw;
 }
@@ -388,8 +363,7 @@ section {
 
 #schedule-content {
     width: 32.5vw;
-    margin-left: 5vw;
-    background-color: transparent;
+    margin-left: 6vw;
     z-index: 1;
 }
 
@@ -421,7 +395,6 @@ section {
     padding-top: 8vh;
     padding-bottom: 20vh;
     background-color: var(--dark-blue);
-    z-index: 1001;
 }
 
 #sponsors-container {
@@ -461,7 +434,6 @@ section {
 }
 
 #faqs-wrapper {
-    margin-top: 30vh;
     margin-bottom: 7vh;
 }
 
@@ -576,50 +548,21 @@ footer {
     fill: var(--primary-color)
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 360px) {
-    #about {
-        top: 5%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-/* iPhone 6/7/8 Plus */
-@media only screen and (max-width: 414px) and (max-height: 736px) {
-    #about {
-        top: 5%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-/* Pixel 2 XL */
-@media only screen and (max-width: 411px) and (max-height: 823px) {
-    #about {
-        top: 3%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
 @media only screen and (max-width: 1200px) {
     h1 {
         font-size: 12vw;
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 6vw;
         line-height: 1.5em;
     }
 
-    body, h5, p {
+    h4 {
+        font-size: 4vw;
+    }
+
+    body, h5, p, span {
         font-size: 2vw;
         line-height: 1.25em;
     }
@@ -630,7 +573,7 @@ footer {
     }
 
     #hero {
-        height: 80vh;
+        height: 90vh;
     }
 
     #hero-content {
@@ -651,26 +594,9 @@ footer {
         padding: 1em 0;
     }
 
-    #cat-illo {
-        display: none;
-    }
-
-    #about {
-        top: 28%;
-    }
-
-    #about .button {
-        top: 0vh;
-    }
-
     /* SCHEDULE SECTION */
     .schedule-illo {
         display: none;
-    }
-
-    #schedule {
-        font-size: 1rem;
-        margin-top: -10%;
     }
 
     #schedule-content {
@@ -837,24 +763,6 @@ footer {
         display: none;
     }
 
-    #about {
-        top: 14%;
-    }
-
-    #schedule {
-        margin-top: -30%;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    #about {
-        top: 20%;
-    }
-
-    #schedule {
-        font-size: 0.75rem;
-        margin-top: -12%;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -867,16 +775,12 @@ footer {
         font-size: 10vw;
     }
 
-    h2 {
-        font-size: 7vw;
-    }
-
-    h3 {
-        font-size: 8vw;
+    h2, h3 {
+        font-size: 6vw;
     }
 
     body, h4, h5, p, span {
-        font-size: 5vw;
+        font-size: 1em;
         line-height: 1.375em;
         /* font-size: 1em; */
     }
@@ -896,44 +800,39 @@ footer {
         top: -8vh;
     }
 
-    #forest-illo-base {}
-
     #schedule {
-        position: relative;
         display: flex;
         flex-direction: row;
         background-color: var(--dark-blue);
-        height: auto;
+    }
+
+    #about-background {
+        right: -5vw;
+        padding: 2em 0 0;
     }
 
     #about-content {
         max-width: 80vw;
         text-align: center;
-        margin: 0 auto 4vh;
-    }
-
-    #about {
-        top: 12%;
+        display: block;
+        margin: 0 auto;
     }
 
     #about-text {
         margin: auto auto 29px;
         max-width: 90%;
-        font-size: 2rem;
     }
 
     .button {
         font-size: 24px;
         line-height: 33px;
-        ;
         margin: auto;
-        /* border: 1px solid #9b9b9b; */
         padding: .6em 0;
     }
 
     /* SCHEDULE SECTION */
     #schedule {
-        padding-top: 0;
+        padding-top: 4em;
         display: flex;
         flex-wrap: wrap-reverse;
     }
@@ -952,7 +851,6 @@ footer {
     }
 
     #schedule-content>.section-title {
-        position: relative;
         left: 0;
     }
 
@@ -1028,25 +926,5 @@ footer {
         height: 8vw;
         margin-right: 0;
         transition: transform 0.5s;
-    }
-}
-
-@media only screen and (max-width: 610px) {
-    #about {
-        top: 10%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    #about {
-        top: 7%;
-    }
-
-    #about-text {
-        font-size: 1rem;
     }
 }

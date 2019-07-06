@@ -16,8 +16,7 @@
 }
 
 .animateDiamondBearCard {
-    visibility: visible !important;
-	width: 500px;
+	width: 275px;
     -webkit-transform: rotate(-30deg);
         -ms-transform: rotate(-30deg);
             transform: rotate(-30deg);
@@ -31,6 +30,7 @@
 }
 
 .animateEvilQueenCard {
+    width: 250px;
 	-webkit-animation-name: swivel-left-evil-queen-card;
 	        animation-name: swivel-left-evil-queen-card;
     -webkit-animation-duration: 1s;
@@ -52,6 +52,7 @@
 }
 
 .animateClubKingCard {
+    width: 300px;
     -webkit-animation-name: swivel-left-club-king-card;
             animation-name: swivel-left-club-king-card;
     -webkit-animation-duration: 1s;
