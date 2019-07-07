@@ -19,9 +19,21 @@ body {
 
 button {
     font-family: 'Source Serif Pro', serif;
-    font-size: 1.5vw;
+    font-size: 3vw;
     line-height: 1.25em;
     border: none;
+    background-color: var(--dark-blue);
+    padding: 1em 4em;
+    cursor: pointer;
+    margin: .5em;
+    border-radius: 4px;
+    color: var(--inverted-color);
+    transition: transform 1s ease, background-color 1s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+    background-color: #184168;
 }
 
 h1 {
@@ -226,19 +238,29 @@ section {
 /* HERO SECTION */
 #hero {
     z-index: 10;
-    height: 120vh;
-    background-color: transparent;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+#hero-paper {
+    display: inline-flex;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('assets/illos/hero/paper.png');
+    background-position-y: -10%;
+    background-size: 100% 100%;
+    transform: translate(0, -15vh) scale(.7) rotateY(-3deg);
+}
+
+#hero-paper > img {
+    width: 60%;
 }
 
 #hero-content {
-    margin-top: 10vh;
-    position: relative;
-    z-index: 1;
-}
-
-#hero-illo {
-    width: 100%;
+    transform: rotate(-3deg);
+    margin-bottom: 2em;
 }
 
 /* ABOUT SECTION */
@@ -300,31 +322,6 @@ section {
 
 #about-content > .section-title {
     margin-bottom: .25em;
-}
-
-/* #about-text {
-    font-size: 1.33em;
-    line-height: 1.33em;
-} */
-
-.button {
-    box-sizing: border-box;
-    width: 10em;
-    max-width: 100%;
-    font-weight: 600;
-    color: var(--primary-dark);
-    padding: .6em 1.5em;
-    background-color: var(--inverted-color);
-    font-size: 3vw;
-    line-height: 1.25em;
-    font-family: 'Source Serif Pro', serif;
-    transition: transform 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.button:hover {
-    transform: scale(1.05);
-    color: var(--primary-color);
 }
 
 /* SCHEDULE SECTION */
@@ -428,13 +425,10 @@ section {
     display: flex;
     flex-direction: row;
     background-color: var(--faq-blue);
-    z-index: 3;
+    z-index: 30;
     padding-top: 10vh;
     overflow: visible;
-}
-
-#faqs-wrapper {
-    margin-bottom: 7vh;
+    position: relative;
 }
 
 #faqs-content>.section-title {
@@ -482,10 +476,6 @@ footer {
     z-index: 100;
     width: 60%;
     margin: auto;
-}
-
-#footer-illo-castle>img {
-    width: 100%;
 }
 
 #footer-wrapper {
@@ -572,26 +562,13 @@ footer {
         display: none;
     }
 
-    #hero {
-        height: 90vh;
-    }
-
-    #hero-content {
-        margin-bottom: -10vh;
-    }
-
-    #forest-illo-base {
-        background-position: -20vw -5vh;
+    #hero-paper {
+        transform: translate(-10vw, -5vh) scale(.7);
     }
 
     /* ABOUT SECTION */
     #about-content {
         max-width: 75vw;
-    }
-
-    .button {
-        font-size: 2.1vw;
-        padding: 1em 0;
     }
 
     /* SCHEDULE SECTION */
@@ -782,7 +759,6 @@ footer {
     body, h4, h5, p, span {
         font-size: 1em;
         line-height: 1.375em;
-        /* font-size: 1em; */
     }
 
     .section-content {
@@ -790,9 +766,8 @@ footer {
     }
 
     /* HERO SECTION */
-    #hero-content {
-        margin-top: 2vh;
-        margin-bottom: -5vh;
+    #hero-paper > img {
+        width: 50%;
     }
 
     /* ABOUT SECTION */
@@ -823,11 +798,8 @@ footer {
         max-width: 90%;
     }
 
-    .button {
+    button {
         font-size: 24px;
-        line-height: 33px;
-        margin: auto;
-        padding: .6em 0;
     }
 
     /* SCHEDULE SECTION */

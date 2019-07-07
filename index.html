@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<div id="navbar">
 		<div id="nav-logo-container" class="nav-link grow-anim">
 			<a href="#">
@@ -32,17 +31,21 @@
 			</a>
 		</div>
 	</div>
-
 	<div id="part-one-wrapper">
-		<div id="forest-illo-base" class="illo-base">
-			<object width="120%" type="image/svg+xml" data="assets/illos/hero/merged.svg">
+		<div id="forest-illo-base">
+			<!-- Cutoff wontfix - not sure how -->
+			<object width="115%" type="image/svg+xml" data="assets/illos/hero/merged.svg">
 			</object>
 		</div>
 		<section id="hero">
-			<div id="hero-content">
-				<h1 id="hero-text">HackGT6</h1>
-				<h3>Into the Rabbit Hole</h3>
-				<h3>October 25-27</h3>
+			<div id="hero-paper" class="illo-base">
+				<img src="assets/illos/hero/logo.png"/>
+				<div id="hero-content">
+					<h1 id="hero-text">HackGT6</h1>
+					<h3>Into the Rabbit Hole</h3>
+					<h3>October 25-27</h3>
+					<a href="https://registration.hack.gt"><button>Register</button></a>
+				</div>
 			</div>
 		</section>
 		<section id="about">
@@ -146,13 +149,11 @@
 		</section>
 	</div>
 	<section id="faqs">
-		<div id="faqs-wrapper">
+		<div>
 			<!-- quick hack for mobile-->
 			<div id="faqs-cards-top" class="mobile">
-				<object tabindex="-1" id="diamond-mobile" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
-				</object>
-				<object tabindex="-1" id="queen-mobile" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
-				</object>
+				<img id="diamond-mobile" src="assets/illos/cards/jack.png" />
+				<img id="queen-mobile" src="assets/illos/cards/queen.png" />
 			</div>
 			<div id="faqs-content" class="section-content">
 				<h2 class="section-title">FAQs</h2>
@@ -190,21 +191,15 @@
 				</div>
 			</div>
 			<div id="faqs-cards-bottom" class="mobile">
-				<object tabindex="-1" id="jester-mobile" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
-				</object>
-				<object tabindex="-1" id="club-mobile" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
-				</object>
+				<img id="jester-mobile" src="assets/illos/cards/jester.png" />
+				<img id="club-mobile" src="assets/illos/cards/king.png" />
 			</div>
 		</div>
 		<div class="faqs-illo">
-			<object tabindex="-1" id="diamondBearCard" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
-			</object>
-			<object tabindex="-1" id="evilQueenCard" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
-			</object>
-			<object tabindex="-1" id="jesterBearCard" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
-			</object>
-			<object tabindex="-1" id="clubKingCard" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
-			</object>
+			<img id="diamondBearCard" class="playing-card" src="assets/illos/cards/jack.png" />
+			<img id="evilQueenCard" src="assets/illos/cards/queen.png" />
+			<img id="jesterBearCard" src="assets/illos/cards/jester.png" />
+			<img id="clubKingCard" src="assets/illos/cards/king.png" />
 		</div>
 	</section>
 

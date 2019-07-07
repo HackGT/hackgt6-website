@@ -40,6 +40,7 @@ function animateDiamondBearCard() {
     if (inView(element)) {
         element.classList.add('animateDiamondBearCard');
         element.classList.add('display');
+        document.removeEventListener('scroll', animateDiamondBearCard);
     }
 }
 
@@ -48,6 +49,7 @@ function animateEvilQueenCard() {
     if (inView(element)) {
         element.classList.add('animateEvilQueenCard');
         element.classList.add('display');
+        document.removeEventListener('scroll', animateEvilQueenCard);
     }
 }
 
@@ -56,6 +58,7 @@ function animateJesterBearCard() {
     if (inView(element)) {
         element.classList.add('animateJesterBearCard');
         element.classList.add('display');
+        document.removeEventListener('scroll', animateJesterBearCard);
     }
 }
 
@@ -64,6 +67,7 @@ function animateClubKingCard() {
     if (inView(element)) {
         element.classList.add('animateClubKingCard');
         element.classList.add('display');
+        document.removeEventListener('scroll', animateClubKingCard);
     }
 }
 
@@ -72,18 +76,19 @@ function animateHeart() {
         element = elementObject.contentDocument.getElementById("clip-rect-heart"),
         elementHeart = elementObject.contentDocument.getElementById("heart");
 
-  if (inViewSVG(element, elementObject)) {
-      elementHeart.classList.add('display');
-      element.classList.add('animateHeart');
-  }
+    if (inViewSVG(element, elementObject)) {
+        elementHeart.classList.add('display');
+        element.classList.add('animateHeart');
+        document.removeEventListener('scroll', animateHeart);
+    }
 }
 
 function inViewSVG(element, elementObject) {
     var windowHeight = window.innerHeight,
-        scrollY = window.scrollY,
-        scrollPosition = scrollY + windowHeight,
-        elementHeight = 0.4 * elementObject.clientHeight,
-        elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
+    scrollY = window.scrollY,
+    scrollPosition = scrollY + windowHeight,
+    elementHeight = 0.4 * elementObject.clientHeight,
+    elementPosition = elementObject.getBoundingClientRect().top + scrollY + elementHeight;
     return scrollPosition > elementPosition;
 }
 
