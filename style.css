@@ -291,9 +291,7 @@ section {
 #about {
     z-index: 10;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
+    align-items: center;
     overflow: visible;
     background-color: var(--dark-blue);
 }
@@ -311,7 +309,6 @@ section {
     max-width: 50%;
     padding: 4em;
     position: relative;
-    right: 4em;
     border: 0;
     z-index: 100;
     background-color: rgba(255, 255, 255, .85);
@@ -329,6 +326,10 @@ section {
     z-index: 10;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    /* something's happening here... */
     background-color: var(--dark-blue);
 }
 
@@ -337,30 +338,16 @@ section {
     margin-bottom: 1vw;
 }
 
-#schedule-illo {
-    height: 200%;
-    /* TODO: Investigate what's happening here, why doesn't 100% work? */
-    width: 100%;
-    position: absolute;
-    z-index: -100;
-    /* background-color: var(--dark-blue); */
-    background-color: transparent;
-}
-
 #mushrooms-illo {
-    width: 45%;
-    height: auto;
-    background-position: 50% 60%;
-    background-size: contain;
+    width: 40%;
     background-image: url(./assets/illos/forest/shrooms.svg);
     position: relative;
-    left: -5vw;
     z-index: 1;
 }
 
 #schedule-content {
-    width: 32.5vw;
-    margin-left: 6vw;
+    margin: 0;
+    width: 40vw;
     z-index: 1;
 }
 
@@ -782,7 +769,6 @@ footer {
     }
 
     #about-background {
-        right: -5vw;
         padding: 2em 0 0;
     }
 
@@ -806,7 +792,6 @@ footer {
     #schedule {
         padding-top: 4em;
         display: flex;
-        flex-wrap: wrap-reverse;
     }
 
     #mushrooms-illo {
