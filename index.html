@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<div id="navbar">
 		<div id="nav-logo-container" class="nav-link grow-anim">
 			<a href="#">
@@ -32,40 +31,39 @@
 			</a>
 		</div>
 	</div>
-
 	<div id="part-one-wrapper">
 		<div id="forest-illo-base">
-			<object width="120%" type="image/svg+xml" data="assets/illos/hero/merged.svg">
+			<!-- Cutoff wontfix - not sure how -->
+			<object width="115%" type="image/svg+xml" data="assets/illos/hero/merged.svg">
 			</object>
 		</div>
 		<section id="hero">
-			<div id="hero-content">
-				<h1 id="hero-text">HackGT6</h1>
-				<h3>Into the Rabbit Hole</h3>
-				<h3 id="hero-dates">October 25-27</h3>
+			<div id="hero-paper" class="illo-base">
+				<img src="assets/illos/hero/logo.png"/>
+				<div id="hero-content">
+					<h1 id="hero-text">HackGT6</h1>
+					<h3>Into the Rabbit Hole</h3>
+					<h4>October 25-27</h4>
+					<a href="https://registration.hack.gt"><button>Register</button></a>
+				</div>
 			</div>
 		</section>
 		<section id="about">
-			<div id="about-content" class="section-content inverted-text">
-				<h2 class="section-title inverted-text">Welcome to Wonderland</h2>
-				<p id="about-text">
-					.. a place with the most unexpected of things. Follow Beardell
-					on a 36-hour adventure as his world gets turned upside down!
-					As you explore Wonderland, you'll encounter wild characters,
-					use fantastical technology, and maybe even create the impossible.
-					What are you waiting for? Into the rabbit hole you go!
-				</p>
-				<object id="cat-illo" type="image/svg+xml" data="assets/illos/forest/cat.svg" tabindex="-1"></object>
-				<a href="https://registration.hack.gt">
-					<button class="button" tabindex="-1">Register</button>
-				</a>
+			<div id="about-background">
+				<div id="about-content" class="section-content">
+					<h2 class="section-title">Welcome to Wonderland</h2>
+					<p id="about-text">
+						Wonderland is a place with the most unexpected of things. Follow Beardell
+						on a 36-hour adventure as his world gets turned upside down!
+						As you explore Wonderland, you'll encounter wild characters,
+						use fantastical technology, and maybe even create the impossible.
+						What are you waiting for? Into the rabbit hole you go!
+					</p>
+				</div>
 			</div>
 		</section>
 
 		<section id="schedule">
-			<div id="schedule-illo" class="illo-base">
-			</div>
-			<div id="mushrooms-illo" class="illo-base"></div>
 			<div id="schedule-content" class="section-content inverted-text">
 				<h2 id="schedule-title" class="section-title">Schedule</h2>
 				<div class="schedule-block">
@@ -135,6 +133,8 @@
 					</div>
 				</div>
 			</div>
+			<img src="assets/illos/forest/shroom-base.png" id="mushrooms-illo"/>
+			<!-- <object id="mushrooms-illo" tabindex="-1" type="image/svg+xml" data="assets/illos/forest/shrooms.svg"> </object> -->
 		</section>
 
 		<section id="sponsors">
@@ -150,19 +150,21 @@
 		</section>
 	</div>
 	<section id="faqs">
-		<div id="faqs-wrapper">
+		<div>
 			<!-- quick hack for mobile-->
 			<div id="faqs-cards-top" class="mobile">
-				<object tabindex="-1" id="diamond-mobile" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
-				</object>
-				<object tabindex="-1" id="queen-mobile" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
-				</object>
+				<img id="diamond-mobile" src="assets/illos/cards/jack.png" />
+				<img id="queen-mobile" src="assets/illos/cards/queen.png" />
 			</div>
 			<div id="faqs-content" class="section-content">
 				<h2 class="section-title">FAQs</h2>
 				<div class="faqs-item">
 					<h5 class="faqs-question">Where is HackGT6?</h5>
 					<p class="faqs-answer">The event will take place on Georgia Tech's campus in the Klaus Advanced Computing Building.</p>
+				</div>
+				<div class="faqs-item">
+					<h5 class="faqs-question">How does registration work?</h5>
+					<p class="faqs-answer">Register <a href="https://registration.hack.gt">here</a>. The deadline for participants who need travel reimbursement is August 14th. The deadline for other participants is September 20th. Applications for mentors and volunteers will open in September.</p>
 				</div>
 				<div class="faqs-item">
 					<h5 class="faqs-question">What should I bring?</h5>
@@ -190,21 +192,15 @@
 				</div>
 			</div>
 			<div id="faqs-cards-bottom" class="mobile">
-				<object tabindex="-1" id="jester-mobile" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
-				</object>
-				<object tabindex="-1" id="club-mobile" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
-				</object>
+				<img id="jester-mobile" src="assets/illos/cards/jester.png" />
+				<img id="club-mobile" src="assets/illos/cards/king.png" />
 			</div>
 		</div>
 		<div class="faqs-illo">
-			<object tabindex="-1" id="diamondBearCard" type="image/svg+xml" data="assets/illos/cards/diamondBearCard.svg">
-			</object>
-			<object tabindex="-1" id="evilQueenCard" type="image/svg+xml" data="assets/illos/cards/evilQueenCard.svg">
-			</object>
-			<object tabindex="-1" id="jesterBearCard" type="image/svg+xml" data="assets/illos/cards/jesterBearCard.svg">
-			</object>
-			<object tabindex="-1" id="clubKingCard" type="image/svg+xml" data="assets/illos/cards/clubKingCard.svg">
-			</object>
+			<img id="diamondBearCard" class="playing-card" src="assets/illos/cards/jack.png" />
+			<img id="evilQueenCard" src="assets/illos/cards/queen.png" />
+			<img id="jesterBearCard" src="assets/illos/cards/jester.png" />
+			<img id="clubKingCard" src="assets/illos/cards/king.png" />
 		</div>
 	</section>
 

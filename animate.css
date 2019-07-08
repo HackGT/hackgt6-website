@@ -1,219 +1,144 @@
 .animateHeart {
     -webkit-animation-name: move-part-1;
             animation-name: move-part-1;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
 }
 
 .display {
+    /* Not display due to animation rules */
     visibility: visible !important;
 }
 
 #diamondBearCard, #evilQueenCard, #jesterBearCard, #clubKingCard{
     visibility: hidden;
+    -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    position: relative;
+}
+
+#diamondBearCard {
+    width: 275px;
 }
 
 .animateDiamondBearCard {
-    visibility: visible !important;
-	width: 500px;
     -webkit-transform: rotate(-30deg);
-        -ms-transform: rotate(-30deg);
             transform: rotate(-30deg);
     -webkit-animation-name: swivel-left-diamond-bear-card;
             animation-name: swivel-left-diamond-bear-card;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    position: relative;
+}
+
+#evilQueenCard {
+    width: 250px;
 }
 
 .animateEvilQueenCard {
 	-webkit-animation-name: swivel-left-evil-queen-card;
 	        animation-name: swivel-left-evil-queen-card;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    position: relative;
+}
+
+#jesterBearCard {
+	width: 200px;
 }
 
 .animateJesterBearCard {
-	width: 200px;
     -webkit-animation-name: swivel-left-jester-bear-card;
             animation-name: swivel-left-jester-bear-card;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    position: relative;
+}
+
+#clubKingCard {
+    width: 300px;
 }
 
 .animateClubKingCard {
     -webkit-animation-name: swivel-left-club-king-card;
             animation-name: swivel-left-club-king-card;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    position: relative;
-    left: 100px;
-}
-
-@-webkit-keyframes enter-from-right {
-    from {
-        -webkit-transform: translate(700px, 40px);
-                transform: translate(700px, 40px);
-    }
-    to {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-}
-
-@keyframes enter-from-right {
-    from {
-        -webkit-transform: translate(700px, 40px);
-                transform: translate(700px, 40px);
-    }
-    to {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
 }
 
 @-webkit-keyframes swivel-left-diamond-bear-card {
     from {
-        -webkit-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-        left: 500px;
-        top: -500px;
+        -webkit-transform: translate(500px, -500px) rotate(-90deg);
     }
     to {
-        -webkit-transform: rotate(-30deg);
-                transform: rotate(-30deg);
-        left: -150px;
-        top: 0px;
+        -webkit-transform: translate(-150px, 0px) rotate(-30deg);
     }
 }
 
 @keyframes swivel-left-diamond-bear-card {
     from {
-        -webkit-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-        left: 500px;
-        top: -500px;
+        transform: translate(500px, -500px) rotate(-90deg);
     }
     to {
-        -webkit-transform: rotate(-30deg);
-                transform: rotate(-30deg);
-        left: -150px;
-        top: 0px;
+        transform: translate(-150px, 0) rotate(-30deg);
     }
 }
 
 @-webkit-keyframes swivel-left-evil-queen-card {
     from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        left: 500px;
-        top: 100px;
+        -webkit-transform: translate(500px, 100px) rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(20deg);
-                transform: rotate(20deg);
-        left: 0px;
-		top: 150px;
+        -webkit-transform: translate(100px, 20px) rotate(20deg);
     }
 }
 
 @keyframes swivel-left-evil-queen-card {
     from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        left: 500px;
-        top: 100px;
+        transform: translate(500px, 100px) rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(20deg);
-                transform: rotate(20deg);
-        left: 0px;
-		top: 150px;
+        transform: translate(100px, 20px) rotate(20deg);
     }
 }
 
 @-webkit-keyframes swivel-left-jester-bear-card {
     from {
-        -webkit-transform: rotate(-70deg);
-                transform: rotate(-70deg);
-        left: 300px;
-        top: -400px;
+        -webkit-transform: translate(300px, -400px) rotate(-70deg);
     }
     to {
-        -webkit-transform: rotate(-10deg);
-                transform: rotate(-10deg);
-        left: -100px;
-        top: 250px;
+        -webkit-transform: translate(-100px, 0) rotate(-10deg);
     }
 }
 
 @keyframes swivel-left-jester-bear-card {
     from {
-        -webkit-transform: rotate(-70deg);
-                transform: rotate(-70deg);
-        left: 300px;
-        top: -400px;
+        transform: translate(300px, -400px) rotate(-70deg);
     }
     to {
-        -webkit-transform: rotate(-10deg);
-                transform: rotate(-10deg);
-        left: -100px;
-        top: 250px;
+        transform: translate(-100px, 0) rotate(-10deg);
     }
 }
 
 @-webkit-keyframes swivel-left-club-king-card {
     from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        left: 500px;
-        top: 500px;
+        -webkit-transform: translate(500px, 500px) rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(35deg);
-                transform: rotate(35deg);
-        left: 100px;
-        top: 100px;
+        -webkit-transform: translate(100px, 0) rotate(35deg);
     }
 }
 
 @keyframes swivel-left-club-king-card {
     from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        left: 500px;
-        top: 500px;
+        transform: translate(500px, 500px) rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(35deg);
-                transform: rotate(35deg);
-        left: 100px;
-        top: 100px;
+        transform: translate(100px, 0) rotate(35deg);
     }
 }
 
 @-webkit-keyframes move-part-1 {
     from {
         -webkit-transform: rotate(-30deg);
-                transform: rotate(-30deg);
         y: 810px;
         x: -275px;
     }
     to {
         -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
         y: -1500px;
         x: -1500px;
         width: 2500px;
@@ -222,14 +147,12 @@
 
 @keyframes move-part-1 {
     from {
-        -webkit-transform: rotate(-30deg);
-                transform: rotate(-30deg);
+        transform: rotate(-30deg);
         y: 810px;
         x: -275px;
     }
     to {
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
+        transform: rotate(180deg);
         y: -1500px;
         x: -1500px;
         width: 2500px;

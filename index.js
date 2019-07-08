@@ -6,12 +6,10 @@ const main = () => {
             e.preventDefault();
             // Set Offset Distance from top to account for fixed nav
             let offset = 10;
-            console.log(e.target);
             const targetID = e.target.dataset.scroll;
             if (targetID === 'schedule') {
                 offset = 160;
             }
-            console.log(targetID);
             const section = document.getElementById(targetID);
             if (!section) {
                 console.error("No graceful failure here");

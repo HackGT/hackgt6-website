@@ -11,6 +11,7 @@ body {
     font-family: 'Source Serif Pro', serif;
     font-size: 1.5vw;
     line-height: 1.25em;
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     background-color: var(--faq-blue);
@@ -18,14 +19,26 @@ body {
 
 button {
     font-family: 'Source Serif Pro', serif;
-    font-size: 1.5vw;
+    font-size: 3vw;
     line-height: 1.25em;
     border: none;
+    background-color: var(--dark-blue);
+    padding: .7em 3em;
+    cursor: pointer;
+    margin: .5em 1em 1em;
+    border-radius: 4px;
+    color: var(--inverted-color);
+    transition: transform 1s ease, background-color 1s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+    background-color: #184168;
 }
 
 h1 {
     font-family: 'Milonga', Cursive;
-    font-size: 10vw;
+    font-size: 9vw;
     line-height: 1.25em;
     font-weight: normal;
     margin: 0;
@@ -33,7 +46,7 @@ h1 {
 
 h2 {
     font-family: 'Milonga', serif;
-    font-size: 7.5vw;
+    font-size: 7vw;
     line-height: 1.25em;
     font-weight: normal;
     font-style: normal;
@@ -224,25 +237,35 @@ section {
 
 /* HERO SECTION */
 #hero {
-    position: absolute;
-    z-index: 1000;
-    top: 0px;
-    background-color: transparent;
+    z-index: 10;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+#hero-paper {
+    display: inline-flex;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('assets/illos/hero/paper.png');
+    background-position-y: -10%;
+    background-size: 100% 100%;
+    background-clip: border-box;
+    max-width: 50vw;
+    margin-left: 5vw;
+    padding: 1em;
+    transform: rotateY(-3deg) scale(.8);
+}
+
+#hero-paper > img {
+    width: 50%;
+    margin-top: -10%;
 }
 
 #hero-content {
-    margin-top: 10vh;
-    position: relative;
-    z-index: 1;
-}
-
-#hero-dates {
-    font-size: 3vw;
-}
-
-#hero-illo {
-    width: 100%;
+    transform: rotate(-3deg);
+    margin-bottom: 2em;
 }
 
 /* ABOUT SECTION */
@@ -264,132 +287,72 @@ section {
 }
 
 #forest-illo-base {
-    position: relative;
-    background-color: var(--sky-blue);
-    z-index: 999;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 #about {
-    position: absolute;
-    z-index: 1000;
-    top: 25%;
+    z-index: 10;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    /* fixing jump to in-page anchor */
-    padding-top: 40vh;
-    background-color: transparent;
+    align-items: flex-end;
+    overflow: visible;
+    background-color: var(--dark-blue);
 }
 
 #about-content {
-    max-width: 50vw;
+    max-width: 80%;
     text-align: left;
-    margin: auto 12.5vw;
     z-index: 1;
-}
-
-/*
-#about-content::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-*/
-#about-content>.section-title {
-    margin-bottom: 1.25em;
-}
-
-#about-text {
-    font-size: 1.33em;
-    line-height: 1.33em;
-    margin-bottom: 2vw;
-    max-width: 70%;
-}
-
-#cat-illo {
-    height: 18rem;
     position: relative;
-    left: calc(10em);
-    z-index: 1;
-    pointer-events: none;
-    display: block;
-    margin: 0;
+    margin: 3em;
 }
 
-#about .button {
+#about-background {
+    min-width: 300px;
+    max-width: 900px;
+    padding: 2em;
     position: relative;
-    top: -9rem;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, .85);
+    box-shadow: 0 0 4em 2em rgba(255, 255, 255, .85);
+    border-radius: 8px;
+    margin: 4em 2em;
 }
 
-.button {
-    box-sizing: border-box;
-    width: 10em;
-    max-width: 100%;
-    font-weight: 600;
-    color: var(--primary-dark);
-    padding: .6em 1.5em;
-    background-color: var(--inverted-color);
-    font-size: 3vw;
-    line-height: 1.25em;
-    font-family: 'Source Serif Pro', serif;
-    transition: transform 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.button:hover {
-    transform: scale(1.05);
-    color: var(--primary-color);
+#about-content > .section-title {
+    margin-bottom: .25em;
 }
 
 /* SCHEDULE SECTION */
 #schedule {
-    position: absolute;
-    z-index: 1000;
-    top: 60%;
+    z-index: 10;
     display: flex;
     flex-direction: row;
-    /* background-color: var(--dark-blue); */
-    background-color: transparent;
-    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    /* something's happening here... */
+    background-color: var(--dark-blue);
 }
 
-#schedule-content>.section-title {
-    position: relative;
+#schedule-content > .section-title {
     left: -20%;
     margin-bottom: 1vw;
 }
 
-#schedule-illo {
-    height: 200%;
-    /* TODO: Investigate what's happening here, why doesn't 100% work? */
-    width: 100%;
-    position: absolute;
-    z-index: -100;
-    /* background-color: var(--dark-blue); */
-    background-color: transparent;
-}
-
 #mushrooms-illo {
-    width: 45%;
-    height: auto;
-    background-position: 50% 60%;
-    background-size: contain;
+    width: 40%;
     background-image: url(./assets/illos/forest/shrooms.svg);
+    background-size: contain;
     position: relative;
-    left: -5vw;
     z-index: 1;
 }
 
 #schedule-content {
-    width: 32.5vw;
-    margin-left: 5vw;
-    background-color: transparent;
+    margin: 0;
+    width: 40vw;
     z-index: 1;
 }
 
@@ -419,9 +382,8 @@ section {
     /* fixing jump to in-page anchor */
     margin-top: -1%;
     padding-top: 8vh;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
     background-color: var(--dark-blue);
-    z-index: 1001;
 }
 
 #sponsors-container {
@@ -455,14 +417,10 @@ section {
     display: flex;
     flex-direction: row;
     background-color: var(--faq-blue);
-    z-index: 3;
+    z-index: 30;
     padding-top: 10vh;
     overflow: visible;
-}
-
-#faqs-wrapper {
-    margin-top: 30vh;
-    margin-bottom: 7vh;
+    position: relative;
 }
 
 #faqs-content>.section-title {
@@ -478,9 +436,12 @@ section {
 .faqs-illo {
     margin-left: 12.5vw;
     width: 25vw;
-    height: auto;
-    background-color: var(--faq-blue);
+    align-self: stretch;
+    background-color: transparent;
     z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .faqs-item {
@@ -510,10 +471,6 @@ footer {
     z-index: 100;
     width: 60%;
     margin: auto;
-}
-
-#footer-illo-castle>img {
-    width: 100%;
 }
 
 #footer-wrapper {
@@ -576,50 +533,21 @@ footer {
     fill: var(--primary-color)
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 360px) {
-    #about {
-        top: 5%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-/* iPhone 6/7/8 Plus */
-@media only screen and (max-width: 414px) and (max-height: 736px) {
-    #about {
-        top: 5%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-/* Pixel 2 XL */
-@media only screen and (max-width: 411px) and (max-height: 823px) {
-    #about {
-        top: 3%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
 @media only screen and (max-width: 1200px) {
     h1 {
         font-size: 12vw;
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 6vw;
         line-height: 1.5em;
     }
 
-    body, h5, p {
+    h4 {
+        font-size: 4vw;
+    }
+
+    body, h5, p, span {
         font-size: 2vw;
         line-height: 1.25em;
     }
@@ -629,16 +557,8 @@ footer {
         display: none;
     }
 
-    #hero {
-        height: 80vh;
-    }
-
-    #hero-content {
-        margin-bottom: -10vh;
-    }
-
-    #forest-illo-base {
-        background-position: -20vw -5vh;
+    #hero-paper {
+        max-width: 100vw;
     }
 
     /* ABOUT SECTION */
@@ -646,31 +566,9 @@ footer {
         max-width: 75vw;
     }
 
-    .button {
-        font-size: 2.1vw;
-        padding: 1em 0;
-    }
-
-    #cat-illo {
-        display: none;
-    }
-
-    #about {
-        top: 28%;
-    }
-
-    #about .button {
-        top: 0vh;
-    }
-
     /* SCHEDULE SECTION */
     .schedule-illo {
         display: none;
-    }
-
-    #schedule {
-        font-size: 1rem;
-        margin-top: -10%;
     }
 
     #schedule-content {
@@ -837,24 +735,6 @@ footer {
         display: none;
     }
 
-    #about {
-        top: 14%;
-    }
-
-    #schedule {
-        margin-top: -30%;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    #about {
-        top: 20%;
-    }
-
-    #schedule {
-        font-size: 0.75rem;
-        margin-top: -12%;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -867,18 +747,13 @@ footer {
         font-size: 10vw;
     }
 
-    h2 {
-        font-size: 7vw;
-    }
-
-    h3 {
-        font-size: 8vw;
+    h2, h3 {
+        font-size: 6vw;
     }
 
     body, h4, h5, p, span {
-        font-size: 5vw;
+        font-size: 1.2em;
         line-height: 1.375em;
-        /* font-size: 1em; */
     }
 
     .section-content {
@@ -886,9 +761,12 @@ footer {
     }
 
     /* HERO SECTION */
-    #hero-content {
-        margin-top: 2vh;
-        margin-bottom: -5vh;
+    #hero {
+        padding-bottom: 300px; /* from svg push */
+    }
+
+    #hero-paper > img {
+        width: 50%;
     }
 
     /* ABOUT SECTION */
@@ -896,54 +774,37 @@ footer {
         top: -8vh;
     }
 
-    #forest-illo-base {}
-
     #schedule {
-        position: relative;
         display: flex;
         flex-direction: row;
         background-color: var(--dark-blue);
-        height: auto;
+    }
+
+    #about-background {
+        padding: 2em 0 0;
+        margin: 4em 1em;
     }
 
     #about-content {
         max-width: 80vw;
         text-align: center;
-        margin: 0 auto 4vh;
-    }
-
-    #about {
-        top: 12%;
+        display: block;
+        margin: 0 auto;
     }
 
     #about-text {
         margin: auto auto 29px;
         max-width: 90%;
-        font-size: 2rem;
     }
 
-    .button {
+    button {
         font-size: 24px;
-        line-height: 33px;
-        ;
-        margin: auto;
-        /* border: 1px solid #9b9b9b; */
-        padding: .6em 0;
     }
 
     /* SCHEDULE SECTION */
     #schedule {
-        padding-top: 0;
+        padding-top: 4em;
         display: flex;
-        flex-wrap: wrap-reverse;
-    }
-
-    #mushrooms-illo {
-        position: relative;
-        left: 2vw;
-        width: 100%;
-        height: 400px;
-        /* TODO why is this gone */
     }
 
     #schedule-content {
@@ -952,7 +813,6 @@ footer {
     }
 
     #schedule-content>.section-title {
-        position: relative;
         left: 0;
     }
 
@@ -1028,25 +888,5 @@ footer {
         height: 8vw;
         margin-right: 0;
         transition: transform 0.5s;
-    }
-}
-
-@media only screen and (max-width: 610px) {
-    #about {
-        top: 10%;
-    }
-
-    #about-text {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    #about {
-        top: 7%;
-    }
-
-    #about-text {
-        font-size: 1rem;
     }
 }
