@@ -431,9 +431,12 @@ section {
 .faqs-illo {
     margin-left: 12.5vw;
     width: 25vw;
-    height: auto;
-    background-color: var(--faq-blue);
+    align-self: stretch;
+    background-color: transparent;
     z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .faqs-item {

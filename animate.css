@@ -118,7 +118,7 @@
         -webkit-transform: translate(300px, -400px) rotate(-70deg);
     }
     to {
-        -webkit-transform: translate(-100px, 450px) rotate(-10deg);
+        -webkit-transform: translate(-100px, 0) rotate(-10deg);
     }
 }
 
@@ -127,7 +127,7 @@
         transform: translate(300px, -400px) rotate(-70deg);
     }
     to {
-        transform: translate(-100px, 450px) rotate(-10deg);
+        transform: translate(-100px, 0) rotate(-10deg);
     }
 }
 
@@ -136,7 +136,7 @@
         -webkit-transform: translate(500px, 500px) rotate(0deg);
     }
     to {
-        -webkit-transform: translate(100px, 600px) rotate(35deg);
+        -webkit-transform: translate(100px, 0) rotate(35deg);
     }
 }
 
@@ -145,7 +145,7 @@
         transform: translate(500px, 500px) rotate(0deg);
     }
     to {
-        transform: translate(100px, 600px) rotate(35deg);
+        transform: translate(100px, 0) rotate(35deg);
     }
 }
 
