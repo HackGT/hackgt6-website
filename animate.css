@@ -59,24 +59,6 @@
             animation-name: swivel-left-club-king-card;
 }
 
-@-webkit-keyframes enter-from-right {
-    from {
-        -webkit-transform: translate(700px, 40px);
-    }
-    to {
-        -webkit-transform: translate(0, 0);
-    }
-}
-
-@keyframes enter-from-right {
-    from {
-        transform: translate(700px, 40px);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
 @-webkit-keyframes swivel-left-diamond-bear-card {
     from {
         -webkit-transform: translate(500px, -500px) rotate(-90deg);
