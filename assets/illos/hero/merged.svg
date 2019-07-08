@@ -208,13 +208,13 @@
 
 	@media (max-width: 768px) {
 		[id=background] {
-			transform: translate(0, 20vh);
+			transform: translate(0, 300px);
 		}
 		[id=paths] {
-			transform: translate(0, 20vh);
+			transform: translate(0, 300px);
 		}
 		[id=clouds] {
-			transform: translate(0, 10vh);
+			transform: translate(0, 150px);
 		}
 	}
 </style>
@@ -229,7 +229,7 @@
 </clipPath>
 <title>Wonderland</title>
 <g>
-	<rect width="100%" height="60vh" style="fill:#92e4e1; max-height: 100%;" />
+	<rect  width="100%" height="500px" style="fill:#92e4e1;" />
 	<g>
 			<image href="background.png" id="background"
 				style="width: 100%;"
