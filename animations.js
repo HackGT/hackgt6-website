@@ -8,7 +8,6 @@ var heroContent,
     heartElement,
     heroObject,
     heartContentDocument,
-    pathsContentDocument,
     windowHeight,
     scrollY,
     scrollPosition,
@@ -16,7 +15,6 @@ var heroContent,
     elementPosition;
 
 window.addEventListener("load", () => {
-    heroContent = document.getElementById("hero-content");
     diamondBearCard = document.getElementById("diamondBearCard");
     evilQueenCard = document.getElementById("evilQueenCard");
     jesterBearCard = document.getElementById("jesterBearCard");

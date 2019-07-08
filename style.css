@@ -38,7 +38,7 @@ button:hover {
 
 h1 {
     font-family: 'Milonga', Cursive;
-    font-size: 10vw;
+    font-size: 9vw;
     line-height: 1.25em;
     font-weight: normal;
     margin: 0;
@@ -46,7 +46,7 @@ h1 {
 
 h2 {
     font-family: 'Milonga', serif;
-    font-size: 7.5vw;
+    font-size: 7vw;
     line-height: 1.25em;
     font-weight: normal;
     font-style: normal;
@@ -255,11 +255,12 @@ section {
     max-width: 50vw;
     margin-left: 5vw;
     padding: 1em;
-    transform: rotateY(-3deg);
+    transform: rotateY(-3deg) scale(.8);
 }
 
 #hero-paper > img {
     width: 50%;
+    margin-top: -10%;
 }
 
 #hero-content {

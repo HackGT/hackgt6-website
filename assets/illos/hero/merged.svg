@@ -242,10 +242,10 @@
 			<image x="200px" y="20px" width="100" height="100" id="cloud-3" href="cloud-3.svg"/>
 			<image x="300px" y="100px" width="50" height="50" id="cloud-4" href="cloud-4.svg"/>
 	</g>
-	<g id="paths" transform='translate(600, 5) scale(-1, 1)'>
+	<!-- <g id="paths" transform='translate(600, 5) scale(-1, 1)'>
 		<image x="143" y="157" width="150" height="150" href="path-1.svg" clip-path="url(#cut-off-bottom-path-1)"/>
 		<image x="170" y="200" width="145" height="145" href="path-2.svg" clip-path="url(#cut-off-bottom-path-2)"/>
 		<image x="275" y="270" width="120" height="120" clip-path="url(#cut-off-bottom-path-3)" href="path-3.svg"/>
-	</g>
+	</g> -->
 </g>
 </svg>
