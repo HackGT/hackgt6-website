@@ -28,7 +28,7 @@ button {
     margin: .5em 1em 1em;
     border-radius: 4px;
     color: var(--inverted-color);
-    transition: transform 1s ease, background-color 1s ease;
+    transition: transform .3s ease, background-color .3s ease;
 }
 
 button:hover {
@@ -89,8 +89,12 @@ p {
     font-style: normal;
 }
 
-a {
-    text-decoration: none;
+.inverted-text a {
+    color: #FFBF00;
+}
+
+.inverted-text a:visited {
+    color: #BF9B30;
 }
 
 section {
@@ -185,9 +189,10 @@ section {
 
 .nav-link {
     color: var(--primary-color);
-    font-family: 'Roboto Mono', monospace;
     line-height: 1.17em;
     cursor: pointer;
+    text-decoration: none;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .under-anim {
@@ -210,10 +215,6 @@ section {
 .under-anim:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-#navbar a {
-    font-family: 'Roboto Mono', monospace;
 }
 
 #mlh-trust-badge {
@@ -372,7 +373,7 @@ section {
 
 .schedule-item {
     display: flex;
-    /* we shouldn't wrap, but just in case */
+    padding-left: .5em;
 }
 
 .schedule-times {

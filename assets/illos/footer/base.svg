@@ -2,14 +2,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1567.84 1835.76">
     <defs>
         <clipPath id="cut-off-bottom-heart">
-            <rect id="clip-rect-heart" width="1000" height="4000"/>
+            <rect id="clip-rect-heart" width="3000" height="1000"/>
+            <!-- <rect id="clip-rect-heart" width="1000" height="4000"/> -->
         </clipPath>
     </defs>
     <title>Castle</title>
     <g>
-        <image id="heart" style="visibility: hidden;" x="120" y="35" width="1300" href="heartBehindCastle.svg" clip-path="url(#cut-off-bottom-heart)"/>
+        <image id="heart" style="visibility: hidden;" x="120" y="35" height="900" width="1300" href="heartBehindCastle.svg" clip-path="url(#cut-off-bottom-heart)"/>
     </g>
     <g>
-        <image href="castle.png" style="width: 100%"/>
+        <image href="castle.png" width="100%" height="100%"/>
     </g>
 </svg>

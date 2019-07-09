@@ -1,10 +1,8 @@
 .animateHeart {
-    -webkit-animation-name: move-part-1;
-            animation-name: move-part-1;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-name: move-part-1;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 .display {
@@ -132,31 +130,13 @@
     }
 }
 
-@-webkit-keyframes move-part-1 {
-    from {
-        -webkit-transform: rotate(-30deg);
-        y: 810px;
-        x: -275px;
-    }
-    to {
-        -webkit-transform: rotate(180deg);
-        y: -1500px;
-        x: -1500px;
-        width: 2500px;
-    }
-}
-
 @keyframes move-part-1 {
-    from {
-        transform: rotate(-30deg);
-        y: 810px;
-        x: -275px;
+    0% {
+        height: 0px;
     }
-    to {
-        transform: rotate(180deg);
-        y: -1500px;
-        x: -1500px;
-        width: 2500px;
+
+    100% {
+        height: 2000px;
     }
 }
 
@@ -304,6 +284,10 @@
     }
 }
 
+#background {
+    transform: translate(0, -15vh);
+    /* use vw due to resize */
+}
 
 @media only screen and (max-width: 768px) {
     #background {
