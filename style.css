@@ -431,6 +431,7 @@ section {
     padding-top: 10vh;
     overflow: visible;
     position: relative;
+    will-change: transform;
 }
 
 #faqs-content>.section-title {

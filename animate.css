@@ -19,6 +19,7 @@
     -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     position: relative;
+    will-change: transform;
 }
 
 #diamondBearCard {
@@ -97,7 +98,7 @@
 
 @-webkit-keyframes swivel-left-jester-bear-card {
     from {
-        -webkit-transform: translate(300px, -400px) rotate(-70deg);
+        -webkit-transform: translate(500px, -200px) rotate(-70deg);
     }
     to {
         -webkit-transform: translate(-100px, 0) rotate(-10deg);
@@ -106,7 +107,7 @@
 
 @keyframes swivel-left-jester-bear-card {
     from {
-        transform: translate(300px, -400px) rotate(-70deg);
+        transform: translate(500px, -200px) rotate(-70deg);
     }
     to {
         transform: translate(-100px, 0) rotate(-10deg);
