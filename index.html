@@ -34,8 +34,26 @@
 	<div id="part-one-wrapper">
 		<div id="forest-illo-base">
 			<!-- Cutoff wontfix - not sure how -->
-			<object width="115%" type="image/svg+xml" data="assets/illos/hero/merged.svg">
-			</object>
+			<!-- Inline due to viewbox responsiveness inconsistencies - skipping JS -->
+			<svg width='120%' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="51 10 589.2 2500" style="enable-background:new 0 0 589.2 2500;" xml:space="preserve" preserveAspectRatio="none">
+				<title>Wonderland</title>
+				<g>
+					<rect  width="100%" height="70vh" style="fill:#92e4e1;" />
+					<g>
+							<image href="assets/illos/hero/background2.png" id="background"
+								style="width: 100%;"
+							/>
+					</g>
+					<g id="clouds">
+							<image id="sun" x="400" y="0" width="100" height="100" href="assets/illos/hero/sun.svg"/>
+							<image x="0" y="0" id="cloud-1" width="100" height="100" href="assets/illos/hero/cloud-1.svg"/>
+							<image x="400px" y="50px" width="90" height="90" id="cloud-2" href="assets/illos/hero/cloud-2.svg"/>
+							<image x="200px" y="20px" width="100" height="100" id="cloud-3" href="assets/illos/hero/cloud-3.svg"/>
+							<image x="300px" y="100px" width="50" height="50" id="cloud-4" href="assets/illos/hero/cloud-4.svg"/>
+					</g>
+				</g>
+			</svg>
 		</div>
 		<section id="hero">
 			<div id="hero-paper" class="illo-base">
@@ -50,6 +68,7 @@
 		</section>
 		<section id="about">
 			<div id="about-background">
+				<!-- Fill inside due to border issue -->
 				<div id="about-content" class="section-content">
 					<h2 class="section-title">Welcome to Wonderland</h2>
 					<p id="about-text">
