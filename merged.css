@@ -1,0 +1,214 @@
+.animatePath1 {
+    -webkit-animation-name: expose-path-1;
+            animation-name: expose-path-1;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out	;
+}
+
+.animatePath2 {
+    -webkit-animation-name: expose-path-2;
+            animation-name: expose-path-2;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.animatePath3 {
+    -webkit-animation-name: expose-path-3;
+            animation-name: expose-path-3;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@keyframes expose-path-3 {
+
+    to {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+}
+
+@keyframes expose-path-2 {
+    to {
+        -webkit-transform: translate(0, 300px) rotate(-45deg);
+                transform: translate(0, 300px) rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes expose-path-1 {
+    to {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+}
+
+@keyframes expose-path-1 {
+    to {
+        transform: rotate(10deg);
+    }
+}
+#sun {
+    -webkit-animation-name: enter-from-right;
+            animation-name: enter-from-right;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes enter-from-right {
+    from {
+        -webkit-transform: translate(200px, 4px);
+    }
+    to {
+        -webkit-transform: translate(0, 10px);
+    }
+}
+@keyframes enter-from-right {
+    from {
+            transform: translate(200px, 4px);
+    }
+    to {
+            transform: translate(0, 10px);
+    }
+}
+
+#cloud-1 {
+    animation-name: moverightCloud1;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-2 {
+    animation-name: moverightCloud2;
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-3 {
+    animation-name: moverightCloud3;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cloud-4 {
+    animation-name: moverightCloud4;
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverightCloud1 {
+    0% {
+        transform: translate(0,0);
+    }
+
+    60% {
+        transform: translate(550px, 0);
+    }
+
+    61% {
+        transform: translate(550px, -500px);
+    }
+
+    62% {
+        transform: translate(-85px, -500px);
+    }
+
+    80% {
+        transform: translate(-85px, 0px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(200px, 0);
+    }
+    51% {
+        transform: translate(200px, -500px);
+    }
+    52% {
+        transform: translate(-500px, -500px);
+    }
+    60% {
+        transform: translate(-500px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes moverightCloud3 {
+    0% {
+        transform: translate(0, 0);
+   }
+   50% {
+        transform: translate(350px, 0);
+   }
+   51% {
+        transform: translate(350px, -500px);
+   }
+   52% {
+        transform: translate(-500px, -500px);
+   }
+   60% {
+        transform: translate(-500px, 0);
+   }
+   100% {
+        transform: translate(0,0);
+   }
+}
+
+@keyframes moverightCloud4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(300px, 0);
+    }
+    41% {
+        transform: translate(300px, -500px);
+    }
+    42% {
+        transform: translate(-500px, -500px);
+    }
+    43% {
+        transform: translate(-400px, 0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #background {
+        transform: translate(0, 500px);
+    }
+    #paths {
+        transform: translate(0, 500px);
+    }
+    #clouds {
+        transform: translate(0, 250px);
+    }
+}
