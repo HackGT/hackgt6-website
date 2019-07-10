@@ -262,7 +262,7 @@ section {
     background-size: 100% 100%;
     background-clip: border-box;
     max-width: 40vw;
-    margin: 3vw 5vw;
+    margin: 3vw 7vw;
     padding: 1em;
     transform: rotateY(-3deg);
 
@@ -804,8 +804,8 @@ footer {
     /* HERO SECTION */
     #hero-paper {
         max-width: 100vw;
-        margin-top: 2em;
-        transform: translate(-2vw) rotateY(-3deg);
+        margin: 12vw 0 0;
+        transform: translateY(12vw) rotateY(-3deg);
     }
 
     #hero {
