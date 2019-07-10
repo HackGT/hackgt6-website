@@ -30,9 +30,9 @@ const main = () => {
         if (cachedScroll > window.pageYOffset
             || (document.activeElement
                 && document.activeElement.classList.contains('nav-link'))) { // navbar
-                    document.getElementById("navbar").style.top = "0";
+                    document.getElementById("navbar").classList.remove("nav-hide");
         } else {
-            document.getElementById("navbar").style.top = "-6vh";
+            document.getElementById("navbar").classList.add("nav-hide");
         }
         cachedScroll = window.pageYOffset;
     })

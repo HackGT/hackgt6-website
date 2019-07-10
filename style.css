@@ -1,3 +1,7 @@
+html {
+    width: 100vw;
+}
+
 body {
     margin: 0;
     --primary-color: #205181;
@@ -25,7 +29,7 @@ button {
     background-color: var(--dark-blue);
     padding: .7em 3em;
     cursor: pointer;
-    margin: .5em 1em 1em;
+    margin: .5em 1em;
     border-radius: 4px;
     color: var(--inverted-color);
     transition: transform .3s ease, background-color .3s ease;
@@ -38,8 +42,8 @@ button:hover {
 
 h1 {
     font-family: 'Milonga', Cursive;
-    font-size: 9vw;
-    line-height: 1.25em;
+    font-size: 5vw;
+    line-height: 1.1em;
     font-weight: normal;
     margin: 0;
 }
@@ -55,8 +59,8 @@ h2 {
 
 h3 {
     font-family: 'Milonga', serif;
-    font-size: 4vw;
-    line-height: 1.25em;
+    font-size: 2vw;
+    line-height: 1.1em;
     font-weight: normal;
     font-style: normal;
     margin: 0;
@@ -72,7 +76,6 @@ h4 {
 }
 
 h5 {
-    /* Basically just bold */
     font-size: 1.5vw;
     line-height: 1.5em;
     font-weight: 700;
@@ -139,6 +142,14 @@ section {
     display: none;
 }
 
+#navbar {
+    transition: transform 1s;
+}
+
+.nav-hide {
+    transform: translateY(-6vh);
+}
+
 /* NAVIGATION */
 #navbar {
     z-index: 10000;
@@ -146,16 +157,12 @@ section {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgba(255, 255, 255, .85);
     position: fixed;
     margin-bottom: -6vh;
     top: 0;
-    -webkit-transition: top .7s;
-    transition: top .7s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
     box-sizing: border-box;
     padding: 1vh 12.5vw;
 }
@@ -163,6 +170,7 @@ section {
 #nav-logo-container {
     height: 100%;
     box-sizing: border-box;
+    margin-right: 12vw;
 }
 
 .nav-logo {
@@ -219,10 +227,10 @@ section {
 
 #mlh-trust-badge {
     display: block;
-    position: relative;
+    position: fixed;
     width: 4.5vw;
-    top: 2vw;
-    z-index: 10000;
+    right: 10vw;
+    z-index: 1000000;
 }
 
 #mlh-trust-badge img {
@@ -253,15 +261,17 @@ section {
     background-position-y: -10%;
     background-size: 100% 100%;
     background-clip: border-box;
-    max-width: 50vw;
-    margin-left: 5vw;
+    max-width: 40vw;
+    margin: 3vw 5vw;
     padding: 1em;
-    transform: rotateY(-3deg) scale(.8);
+    transform: rotateY(-3deg);
+
 }
 
 #hero-paper > img {
-    width: 50%;
-    margin-top: -10%;
+    width: 60%;
+    object-fit: cover;
+    overflow: auto;
 }
 
 #hero-content {
@@ -308,6 +318,11 @@ section {
     z-index: 1;
     position: relative;
     margin: 3em;
+}
+
+#about-content > h2 {
+    margin: auto;
+    text-align: center;
 }
 
 #about-content > p {
@@ -546,17 +561,13 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-    h1 {
-        font-size: 10vw;
-    }
-
     h2 {
         font-size: 6vw;
         line-height: 1.5em;
     }
 
-    h4 {
-        font-size: 4vw;
+    h3 {
+        font-size: 3vw;
     }
 
     body, h5, p, span {
@@ -613,7 +624,7 @@ footer {
     #sponsor-note {
         max-width: 75vw;
         font-size: 1em;
-        line-height: 1em;
+        line-height: 1.2em;
     }
 
     /* FAQS SECTION */
@@ -655,7 +666,7 @@ footer {
 
     #queen-mobile {
         height: 36vw;
-        transform: rotate(-30deg);
+        transform: translateX(-2vw) rotate(-30deg);
     }
 
     #jester-mobile {
@@ -668,7 +679,7 @@ footer {
 
     #club-mobile {
         height: 40vw;
-        transform: rotate(47deg);
+        transform: translateX(-4vw) rotate(47deg);
     }
 
     #faqs-cards-bottom {
@@ -758,6 +769,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+
+    #mlh-trust-badge {
+        display: none;
+    }
     body {
         font-size: 4vw;
         line-height: 1.375em;
@@ -908,7 +923,6 @@ footer {
         margin-top: 1.5vw;
         margin-bottom: 2.5vw;
     }
-
     .footer-question {
         margin-bottom: -6vw;
     }
