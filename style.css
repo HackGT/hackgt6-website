@@ -270,7 +270,7 @@ section {
 
 #hero-paper > img {
     width: 60%;
-    object-fit: cover;
+    object-fit: contain;
     overflow: auto;
 }
 
@@ -345,7 +345,7 @@ section {
     max-width: 32em;
     position: relative;
     z-index: 100;
-    margin: 8em 2em 4em;
+    margin: 24em 2em 4em;
     display: flex;
 }
 
