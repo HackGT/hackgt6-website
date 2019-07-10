@@ -5,15 +5,18 @@ const main = () => {
         l.addEventListener('click', e => {
             e.preventDefault();
             // Set Offset Distance from top to account for fixed nav
-            let offset = 10;
+            let offset = 80;
+
             const targetID = e.target.dataset.scroll;
-            if (targetID === 'schedule') {
-                offset = 160;
+            if (targetID === 'about') {
+                offset = -120;
             }
             const section = document.getElementById(targetID);
             if (!section) {
                 console.error("No graceful failure here");
             }
+            // scrollTo is jumpy :(
+            // section.scrollIntoView({behavior: 'smooth', block: block});
             window.scrollTo({
                 top: section.offsetTop - offset,
                 behavior: "smooth"
