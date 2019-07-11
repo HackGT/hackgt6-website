@@ -16,7 +16,7 @@
     -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     position: relative;
-    will-change: transform;
+    /* will-change: transform; */
 }
 
 #diamondBearCard {

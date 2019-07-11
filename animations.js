@@ -20,10 +20,10 @@ window.addEventListener("load", () => {
     jesterBearCard = document.getElementById("jesterBearCard");
     clubKingCard = document.getElementById("clubKingCard");
 
-    heartObject = document.getElementById("heart");
-    heartContentDocument = heartObject.contentDocument;
-    heart = heartContentDocument.getElementById("clip-rect-heart");
-    heartElement = heartContentDocument.getElementById("heart");
+    // heartObject = document.getElementById("heart");
+    // heartContentDocument = heartObject.contentDocument;
+    // heart = heartContentDocument.getElementById("clip-rect-heart");
+    // heartElement = heartContentDocument.getElementById("heart");
 
     document.addEventListener('scroll', animateHeart);
     document.addEventListener('scroll', animateDiamondBearCard);
@@ -70,11 +70,13 @@ function animateClubKingCard() {
 }
 
 function animateHeart() {
-    var elementObject = document.getElementById("heart"),
-        element = elementObject.contentDocument.getElementById("clip-rect-heart"),
-        elementHeart = elementObject.contentDocument.getElementById("heart");
+    var element = document.getElementById("clip-rect-heart"),
+        elementHeart = document.getElementById("heart");
 
-    if (inViewSVG(element, elementObject)) {
+    if (inView(element)) {
+        console.log("executed")
+        console.log(elementHeart);
+        console.log(element);
         elementHeart.classList.add('display');
         element.classList.add('animateHeart');
         document.removeEventListener('scroll', animateHeart);
@@ -91,6 +93,7 @@ function inViewSVG(element, elementObject) {
 }
 
 function inView(element) {
+    console.log("executed scroll checks")
     var windowHeight = window.innerHeight,
         scrollY = window.scrollY,
         scrollPosition = scrollY + windowHeight,
