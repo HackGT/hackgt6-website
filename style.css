@@ -554,6 +554,10 @@ footer {
     position: relative;
 }
 
+#footer-logo-container {
+    overflow: visible;
+}
+
 .social-row>a>img {
     margin-right: 2vw;
     width: 4vw;
