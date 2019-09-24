@@ -494,7 +494,7 @@ section {
 }
 
 .sponsor-container .king img {
-    width: calc(10 * 30px);
+    width: calc(11 * 30px);
     padding: 0 30px 0 30px;
 }
 
@@ -503,14 +503,9 @@ section {
     padding: 0 30px 0 30px;
 }
 
-.sponsor-container .queen .level-3 img {
-    width: calc(3 * 30px);
-    padding: 0 30px 0 30px;
-}
-
 .sponsor-container .jack img {
-    width: calc(4 * 30px);
-    padding: 0 20px 0 20px;
+    width: calc(3.75 * 30px);
+    padding: 0 30px 20px 30px;
 }
 
 .sponsor-container .joker img {
