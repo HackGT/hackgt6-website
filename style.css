@@ -458,6 +458,10 @@ section {
     align-items: center;
 }
 
+.sponsor-container a {
+    text-decoration: none;
+}
+
 .sponsor-container .king, 
 .sponsor-container .queen,
 .sponsor-container .jack,
