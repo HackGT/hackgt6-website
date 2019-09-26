@@ -476,7 +476,7 @@ section {
     flex-wrap: wrap;
 }
 
-.sponsor-container .queen > div {
+.sponsor-container .queen > div , .sponsor-container .jack > div {
     display: flex;
     align-items: center;
     justify-content: center;
